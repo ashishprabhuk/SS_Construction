@@ -128,7 +128,7 @@ color: #ffd500;
   --text-color: #1A1A19;
   --nav-link-color: #1A1A19;
   --nav-link-hover-color: #008A3D;
-  background-color: #F4FFC3 !important;
+  background-color: #FCF5EB !important;
 }
 
 .header .nav-link {
@@ -182,7 +182,7 @@ color: #ffd500;
 #req-btn {
   background-color: #008A3D;
   border: 1.5px solid #1A1A19;
-  color: #F4FFC3;
+  color: #FCF5EB;
   font-weight: 700;
   border-radius: 20px;
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
@@ -205,7 +205,7 @@ color: #ffd500;
 .btn-outline-light:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border-color: #fff;
-  color: #F4FFC3;
+  color: #FCF5EB;
   transform: scale(1.05);
 }
 
