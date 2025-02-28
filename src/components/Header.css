@@ -1,0 +1,39 @@
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  
+  .nav-link {
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #ff3e3e !important;
+    transform: translateY(-2px);
+  }
+
+  #req-btn{
+      background-color: #ff3e3e;
+      border-color: #ff3e3e;
+      color: #fff;
+      transition: all 0.3s ease;
+      border-radius: 20px;
+    }
+    
+    #req-btn:hover {
+    font-weight: 600;
+    background-color: #fff;
+    color: #ff3e3e;
+    border: 1.5px solid #ffd500;
+  }
+  
+  .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+    color: #ffd500;
+  }
