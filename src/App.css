@@ -1,6 +1,6 @@
-.hero {
+/* .hero {
   min-height: 100vh;
-  padding-top: 56px; /* Offset for fixed navbar */
+  padding-top: 56px;
   color: white;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
@@ -11,4 +11,4 @@
 
 .card:hover {
   transform: translateY(-5px);
-}
+} */

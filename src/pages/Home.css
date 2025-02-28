@@ -1,8 +1,8 @@
-.hero {
+/* .hero {
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       url('https://source.unsplash.com/random/1920x1080/?technology') center/cover;
-    padding-top: 80px; /* Offset for fixed navbar */
+    padding-top: 80px; 
   }
 
   
@@ -16,4 +16,68 @@
   
   .bi {
     vertical-align: -.125em;
+  } */
+
+
+  /* Home.css */
+  .hero {
+    display: flex;
+    align-items: center;
+    padding: 4rem 0 0;
   }
+
+/* Features Section */
+.features .card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  min-height: 300px;
+}
+
+.features .card-title {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+.features .card-text {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.features .bi {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+/* CTA Section */
+.cta-section h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.cta-section .lead {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+/* Responsive Grid */
+
+@media (min-width: 992px) { /* Large screens only */
+  .hero {
+    min-height: 90vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .features .col-md-4 {
+    margin-bottom: 1.5rem;
+  }
+
+  .card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    min-height: auto;
+    padding: 2rem 0 0;
+  }
+
+  .cta-section .btn {
+    width: 100%;
+  }
+}
