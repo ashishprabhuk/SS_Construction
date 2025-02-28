@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { Navigation, Pagination, Autoplay } from "swiper/modules";
 // import "swiper/css";
@@ -40,7 +41,6 @@
 import { useState, useEffect } from 'react';
 import './ImageSlider.css';
 
-// eslint-disable-next-line react/prop-types
 const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
