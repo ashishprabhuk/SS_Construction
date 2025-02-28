@@ -95,11 +95,6 @@ const ImageSlider = ({ slides }) => {
     return () => clearInterval(timer);
   }, [currentIndex]);
 
-  const goToPrevious = () => {
-    setProgress(0);
-    setCurrentIndex(prev => (prev === 0 ? slides.length - 1 : prev - 1));
-  };
-
   const goToNext = () => {
     setProgress(0);
     setCurrentIndex(prev => (prev === slides.length - 1 ? 0 : prev + 1));
@@ -121,9 +116,9 @@ const ImageSlider = ({ slides }) => {
           >
             <div className="slide-overlay">
               <div className="content">
-                {slide.subtitle && <span className="subtitle">{slide.subtitle}</span>}
-                <h2 className="title">{slide.title}</h2>
-                <p className="description">{slide.description}</p>
+                {slide.subtitle && <span className="subtitle" style={{ fontSize: '1.5rem' }}>{slide.subtitle}</span>}
+                <h2 className="title text-center" style={{ fontSize: '4rem' }}>{slide.title}</h2>
+                <p className="description text-center" style={{ fontSize: '1.25rem' }}>{slide.description}</p>
                 {slide.buttonText && (
                   <button className="modern-btn">
                     {slide.buttonText}
@@ -142,18 +137,6 @@ const ImageSlider = ({ slides }) => {
       <div className="progress-bar">
         <div className="progress" style={{ width: `${progress}%` }}></div>
       </div>
-
-      {/* Navigation Arrows */}
-      <button className="nav-arrow prev" onClick={goToPrevious}>
-        <svg viewBox="0 0 24 24" width="32" height="32">
-          <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"/>
-        </svg>
-      </button>
-      <button className="nav-arrow next" onClick={goToNext}>
-        <svg viewBox="0 0 24 24" width="32" height="32">
-          <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
-        </svg>
-      </button>
 
       {/* Pagination Dots */}
       <div className="pagination">

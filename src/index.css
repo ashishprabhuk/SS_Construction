@@ -2,5 +2,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", serif;
+  /* font-family: "Noto Sans", sans-serif; */
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+html, body {
+  overflow: auto;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }

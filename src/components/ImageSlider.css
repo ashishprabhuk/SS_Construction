@@ -1,10 +1,10 @@
 .modern-slider {
-    --primary-color: #ff3e3e;
+    --primary-color: #008A3D;
     --secondary-color: #ffd500;
     --text-color: #f8fafc;
     /* --overlay-bg: linear-gradient(45deg, rgba(59, 7, 100, 0.7), rgba(37, 99, 235, 0.5)); */
     --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    --border-radius: 20px;
+    --border-radius: 0px;
     --glass-bg: rgba(255, 255, 255, 0.1);
     --glass-border: 1px solid rgba(255, 255, 255, 0.2);
     --spacing: 1rem;
@@ -47,10 +47,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: contentReveal 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0.3s forwards;
+    transform: translateY(20px);
+    opacity: 0;
   }
   
-  .content {
-    /* max-width: 1200px  */
+  /* .content {
     max-width: 90%;
     padding: 2rem;
     margin: 0 1rem;
@@ -62,7 +64,7 @@
     transform: translateY(20px);
     opacity: 0;
     animation: contentReveal 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0.3s forwards;
-  }
+  } */
   
   @keyframes contentReveal {
     to {
