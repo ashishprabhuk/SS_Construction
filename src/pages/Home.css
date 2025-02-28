@@ -57,7 +57,7 @@
 
 @media (min-width: 992px) { /* Large screens only */
   .hero {
-    min-height: 90vh;
+    min-height: 100vh;
   }
 }
 
@@ -74,7 +74,6 @@
 @media (max-width: 576px) {
   .hero {
     min-height: auto;
-    padding: 2rem 0 0;
   }
 
   .cta-section .btn {
