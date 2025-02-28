@@ -2,9 +2,9 @@ import { Container, Row, Col, Card, ListGroup } from 'react-bootstrap'
 
 export default function Labs() {
   const experiments = [
-    { title: 'AI Research', status: 'Active', description: 'Exploring next-gen AI algorithms' },
-    { title: 'Quantum Computing', status: 'Upcoming', description: 'Quantum simulation projects' },
-    { title: 'IoT Development', status: 'Completed', description: 'Smart device integration studies' },
+    { title: 'Research 1', status: 'Active', description: 'Some description about the desc' },
+    { title: 'Research 2', status: 'Upcoming', description: 'Some description about the desc' },
+    { title: 'Research 3', status: 'Completed', description: 'Some description about the desc' },
   ]
 
   return (

@@ -2,9 +2,9 @@ import { Container, Card, Row, Col } from 'react-bootstrap'
 
 export default function Services() {
   const services = [
-    { title: 'Web Development', description: 'Custom web solutions...' },
-    { title: 'Mobile Apps', description: 'iOS and Android development...' },
-    { title: 'Cloud Solutions', description: 'Cloud infrastructure...' },
+    { title: 'Service 1', description: 'Services we do...' },
+    { title: 'Service 2', description: 'Services we do...' },
+    { title: 'Service 3', description: 'Services we do...' },
   ]
 
   return (
