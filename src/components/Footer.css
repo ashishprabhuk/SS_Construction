@@ -23,3 +23,11 @@ footer {
     text-decoration: none;
     color: #fff;
   }
+
+  .fading-line {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #fff, transparent);
+    margin: 10px 0;
+  }
+  

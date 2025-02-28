@@ -9,12 +9,12 @@ export default function Footer() {
     <footer className="bg-dark text-light pt-5 mt-5">
       <Container>
         <Row>
-          <Col className="mb-4">
+          <Col className="mb-1">
             <h5 className="text-white mb-4">
               SS Construction - Build Right, Build Strong
             </h5>
           </Col>
-          <Col className="mb-4">
+          <Col className="mb-1">
             <p className="text-secondary">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
@@ -23,8 +23,8 @@ export default function Footer() {
         </Row>
 
         <Row>
-          <Col className="mb-3 d-flex justify-content-center">
-            <Nav className="mt-3">
+          <Col className="mb-1 d-flex justify-content-center">
+            <Nav className="mt-1">
               <Nav.Link
                 as={Link}
                 to="/request"
@@ -58,59 +58,21 @@ export default function Footer() {
 
         <Container fluid className="bg-dark text-white py-4">
           <Row className="w-100 justify-content-between px-3">
-            <Col md={2} className="mb-4">
-              <h6 className="text-white mb-3">Quick Links</h6>
-              <ul className="list-unstyled">
-                <li className="mb-2">
-                  <Link
-                    to="/about"
-                    className="text-secondary text-decoration-none"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li className="mb-2">
-                  <Link
-                    to="/services"
-                    className="text-secondary text-decoration-none"
-                  >
-                    Services
-                  </Link>
-                </li>
-                <li className="mb-2">
-                  <Link
-                    to="/labs"
-                    className="text-secondary text-decoration-none"
-                  >
-                    Research Labs
-                  </Link>
-                </li>
-                <li className="mb-2">
-                  <Link
-                    to="/contact"
-                    className="text-secondary text-decoration-none"
-                  >
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </Col>
-
-            <Col md={2} className="mb-4 text-center text-md-start">
+            <Col md={2} className="mb-1 text-center text-md-start">
               <h6 className="text-white mb-3">Contact Us</h6>
               <p className="text-secondary mb-2">
                 <i className="bi bi-telephone me-2"></i> +91 1234567890
               </p>
             </Col>
 
-            <Col md={3} className="mb-4 text-center text-md-start">
+            <Col md={3} className="mb-1 text-center text-md-start">
               <h6 className="text-white mb-3">Email</h6>
               <p className="text-secondary mb-2">
                 <i className="bi bi-envelope me-2"></i> 123@gmail.com
               </p>
             </Col>
 
-            <Col md={3} className="mb-4 text-center text-md-start">
+            <Col md={3} className="mb-1 text-center text-md-start">
               <h6 className="text-white mb-3">Find Us Here</h6>
               <p className="text-secondary mb-2">
                 <i className="bi bi-geo-alt me-2"></i> 123, Lorem Ipsum, Dolor
@@ -118,7 +80,7 @@ export default function Footer() {
               </p>
             </Col>
 
-            <Col md={2} className="mb-4 text-center text-md-start">
+            <Col md={2} className="mb-1 text-center text-md-start">
               <h6 className="text-white mb-3">Connect</h6>
               <div className="d-flex justify-content-center justify-content-md-start gap-3">
                 <a
@@ -153,11 +115,12 @@ export default function Footer() {
           </Row>
         </Container>
 
-        <Row className="border-top pt-4">
+        <Row className="pt-2">
           <Col className="text-center">
-            <p className="text-secondary mb-1">
+            <div className="fading-line"></div>
+            <p className="text-secondary mb-2">
               &copy; {new Date().getFullYear()} All rights reserved. Developed
-              by{" "}
+              by {" "}
               <b>
                 <a
                   className="text-decoration-none text-secondary"
