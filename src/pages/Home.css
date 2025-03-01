@@ -53,6 +53,10 @@
   font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
+.roller{
+  background-color: #FCF5EB;
+}
+
 /* Responsive Grid */
 
 @media (min-width: 992px) { /* Large screens only */

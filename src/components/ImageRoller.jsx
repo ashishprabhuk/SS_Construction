@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-const ImageRoller = ({ images, slideDuration, imageWidth, fadeColor = '#FCF5EB', imageHeight = '400px' }) => {
+const ImageRoller = ({ images, slideDuration, imageWidth, fadeColor = '#FCF5EB', imageHeight = '60px' }) => {
   return (
     <div style={{ 
       overflow: 'hidden',
@@ -43,7 +43,7 @@ const ImageRoller = ({ images, slideDuration, imageWidth, fadeColor = '#FCF5EB',
         display: 'flex',
         animation: `slide ${slideDuration}s linear infinite`,
         width: `${images.length * imageWidth * 2}px`,
-        willChange: 'transform' // Improve animation performance
+        willChange: 'transform' 
       }}>
         {[...images, ...images].map((img, index) => (
           <div key={index} style={{

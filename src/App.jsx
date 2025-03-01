@@ -6,7 +6,6 @@ import Contact from './pages/Contact'
 import Labs from './pages/Labs'
 import Request from './pages/Request'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css'
 import NotFound from './pages/NotFound'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -21,7 +20,6 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/labs" element={<Labs />} />
         <Route path="/request" element={<Request />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

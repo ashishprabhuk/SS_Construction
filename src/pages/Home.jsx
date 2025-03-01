@@ -81,7 +81,10 @@ export default function Home() {
         </Container>
       </section>
 
-      <section>
+      <section className="roller py-1">
+      <h4 className="text-center mt-2 mb-5 display-6 fw-bold text-dark">
+          Building Success Together
+        </h4>
         <ImageRoller images={images} slideDuration={20} imageWidth={150} />
       </section>
     </>

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Container, Row, Col, Nav } from "react-bootstrap";
 import "./Footer.css";
 import { Link } from "react-router-dom";
@@ -6,7 +7,7 @@ import uaf from "../assets/logo3.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-dark text-light pt-5 mt-5">
+    <footer className="bg-dark text-light pt-5 mt-2">
       <Container>
         {/* <Row>
           <Col className="mb-1">
@@ -61,7 +62,10 @@ export default function Footer() {
             <Col md={2} className="mb-1 text-center text-md-start">
               <h6 className="text-white mb-3">Contact Us</h6>
               <p className="text-secondary mb-2">
-                <i className="bi bi-telephone me-2"></i> +91 1234567890
+                <i className="bi bi-telephone me-2"></i> +91 9842459234
+              </p>
+              <p className="text-secondary mb-2">
+                <i className="bi bi-telephone me-2"></i> +91 8870536435
               </p>
             </Col>
 
@@ -75,8 +79,7 @@ export default function Footer() {
             <Col md={3} className="mb-1 text-center text-md-start">
               <h6 className="text-white mb-3">Find Us Here</h6>
               <p className="text-secondary mb-2">
-                <i className="bi bi-geo-alt me-2"></i> 123, Lorem Ipsum, Dolor
-                Sit, Amet
+                <i className="bi bi-geo-alt me-2"></i> 41/2A2, Kollidam River Bed, Kondayampettai, Thiruvanaikovil, Trichy - 620005
               </p>
             </Col>
 

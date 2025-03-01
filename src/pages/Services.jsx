@@ -1,4 +1,3 @@
-import { Container, Card, Row, Col } from 'react-bootstrap'
 import ServicesSection from '../components/ServiceSection'
 
 export default function Services() {

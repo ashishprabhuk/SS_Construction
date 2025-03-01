@@ -86,10 +86,8 @@ import './ImageSlider.css';
 const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progress, setProgress] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    if (isPaused) return;
 
     const timer = setInterval(() => {
       setProgress((prev) => {
@@ -102,17 +100,17 @@ const ImageSlider = ({ slides }) => {
     }, 50);
 
     return () => clearInterval(timer);
-  }, [currentIndex, isPaused]);
+  }, [currentIndex]);
 
   const goToNext = () => {
     setProgress(0);
     setCurrentIndex(prev => (prev === slides.length - 1 ? 0 : prev + 1));
   };
 
-  const goToPrevious = () => {
-    setProgress(0);
-    setCurrentIndex(prev => (prev === 0 ? slides.length - 1 : prev - 1));
-  };
+  // const goToPrevious = () => {
+  //   setProgress(0);
+  //   setCurrentIndex(prev => (prev === 0 ? slides.length - 1 : prev - 1));
+  // };
 
   const goToSlide = (index) => {
     setProgress(0);

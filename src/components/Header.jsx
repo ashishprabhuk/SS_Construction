@@ -21,7 +21,6 @@ export default function Header() {
           <img src={ssLogo} alt="Tech Innovators" width="100" height="60" />
         </Navbar.Brand>
 
-        {/* Custom Animated Hamburger Button */}
         <button
           className={`menu-toggle ${expanded ? "open" : ""}`}
           onClick={() => setExpanded(!expanded)}
@@ -45,9 +44,6 @@ export default function Header() {
             </Nav.Link>
             <Nav.Link as={Link} to="/contact" onClick={() => setExpanded(false)}>
               Contact
-            </Nav.Link>
-            <Nav.Link as={Link} to="/labs" onClick={() => setExpanded(false)}>
-              Labs
             </Nav.Link>
           </Nav>
 
