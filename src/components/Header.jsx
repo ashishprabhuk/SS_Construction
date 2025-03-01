@@ -18,7 +18,7 @@ export default function Header() {
     >
       <Container className="mx-2" fluid>
         <Navbar.Brand as={Link} to="/" className="me-0">
-          <img src={ssLogo} alt="Tech Innovators" width="80" height="50" />
+          <img src={ssLogo} alt="Tech Innovators" width="100" height="60" />
         </Navbar.Brand>
 
         {/* Custom Animated Hamburger Button */}

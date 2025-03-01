@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-dark text-light pt-5 mt-5">
       <Container>
-        <Row>
+        {/* <Row>
           <Col className="mb-1">
             <h5 className="text-white mb-4">
               SS Construction - Build Right, Build Strong
@@ -20,9 +20,9 @@ export default function Footer() {
               industry.
             </p>
           </Col>
-        </Row>
+        </Row> */}
 
-        <Row>
+        {/* <Row>
           <Col className="mb-1 d-flex justify-content-center">
             <Nav className="mt-1">
               <Nav.Link
@@ -35,7 +35,7 @@ export default function Footer() {
               </Nav.Link>
             </Nav>
           </Col>
-        </Row>
+        </Row> */}
 
         <Row>
           <Col className="d-flex flex-column justify-content-center align-items-center">

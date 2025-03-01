@@ -6,6 +6,10 @@
   font-family: "Open Sans", sans-serif;
 }
 
+body{
+  background-color: #FCF5EB;
+}
+
 /* Hide scrollbar for Chrome, Safari, and Opera */
 html, body {
   overflow: auto;

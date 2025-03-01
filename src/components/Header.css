@@ -13,13 +13,13 @@
   }
   
   .nav-link:hover {
-    color: #008A3D !important;
+    color: #25D366 !important;
     transform: translateY(-2px);
   }
 
   #req-btn{
-      background-color: #008A3D;
-      border-color: #008A3D;
+      background-color: #25D366;
+      border-color: #25D366;
       color: #fff;
       transition: all 0.3s ease;
       border-radius: 20px;
@@ -28,7 +28,7 @@
     #req-btn:hover {
     font-weight: 600;
     background-color: #fff;
-    color: #008A3D;
+    color: #25D366;
     border: 1.5px solid #ffd500;
   }
   
@@ -62,7 +62,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #008A3D;
+  background-color: #25D366;
   transform: translateY(-2px);
   transform: scaleX(0);
   transform-origin: bottom right;
@@ -86,20 +86,20 @@
 }
 
 #req-btn {
-  border-color: #008A3D !important;
-  color: #008A3D !important;
+  border-color: #25D366 !important;
+  color: #25D366 !important;
   margin-left: 20px;
   transition: all 0.3s ease;
 }
 
 #req-btn:hover {
-  background-color: #008A3D !important;
+  background-color: #25D366 !important;
   color: white !important;
 }
 
 #req-btn{
-  background-color: #008A3D;
-  border-color: #008A3D;
+  background-color: #25D366;
+  border-color: #25D366;
   color: #fff;
   transition: all 0.3s ease;
   border-radius: 20px;
@@ -108,7 +108,7 @@
 #req-btn:hover {
 font-weight: 600;
 background-color: #fff;
-color: #008A3D;
+color: #25D366;
 border: 1.5px solid #ffd500;
 }
 
@@ -127,7 +127,7 @@ color: #ffd500;
 .header {
   --text-color: #1A1A19;
   --nav-link-color: #1A1A19;
-  --nav-link-hover-color: #008A3D;
+  --nav-link-hover-color: #25D366;
   background-color: #FCF5EB !important;
 }
 
@@ -154,8 +154,8 @@ color: #ffd500;
 }
 
 .header .nav-link:hover {
-  color: #008A3D !important;
-  font-weight: 700 !important;
+  color: #25D366 !important;
+  /* font-weight: 700 !important; */
   transform: translateY(-2px);
 }
 
@@ -172,24 +172,16 @@ color: #ffd500;
   transform: scaleX(1);
 }
 
-/* Excluded req-btn and btn-outline-light from animations */
-#req-btn, 
-.btn-outline-light {
-  /* transition: none !important;
-  transform: none !important; */
-}
-
 #req-btn {
-  background-color: #008A3D;
+  background-color: #25D366;
   border: 1.5px solid #1A1A19;
-  color: #FCF5EB;
-  font-weight: 700;
-  border-radius: 20px;
+  padding: 10px 20px;
+  color: #1A1A19;
+  border-radius: 25px;
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
 }
 
 #req-btn:hover {
-  font-weight: 700;
   background-color: #1A1A19;
   color: #fff;
   border: 1.5px solid #1A1A19;

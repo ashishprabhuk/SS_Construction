@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 import ImageSlider from "../components/ImageSlider";
 import { slides } from "../Models/Slides";
+import { images } from "../Models/RollerImages";
+import ImageRoller from "../components/ImageRoller";
 
 export default function Home() {
-
   return (
     <>
       {/* Slider Section */}
@@ -26,7 +27,8 @@ export default function Home() {
                   </div>
                   <Card.Title>Title 1</Card.Title>
                   <Card.Text>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -40,7 +42,8 @@ export default function Home() {
                   </div>
                   <Card.Title>Title 2</Card.Title>
                   <Card.Text>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -54,7 +57,8 @@ export default function Home() {
                   </div>
                   <Card.Title>Title 3</Card.Title>
                   <Card.Text>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -68,12 +72,17 @@ export default function Home() {
         <Container className="text-center">
           <h2 className="mb-4">Some CTA Title?</h2>
           <p className="mb-4 lead">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
           </p>
           <Button as={Link} to="/request" variant="outline-light" size="lg">
             Click here for inquiries
           </Button>
         </Container>
+      </section>
+
+      <section>
+        <ImageRoller images={images} slideDuration={20} imageWidth={150} />
       </section>
     </>
   );
