@@ -254,10 +254,9 @@ const ContactSection = () => {
       <Container className="mb-5">
         <div className="text-center mb-5">
           <h2
-            className="display-5 fw-bold text-uppercase mb-3"
+            className="display-5 fw-bold mb-3"
             style={{ color: "#1A1A19" }}
           >
-            <FaBuilding className="me-2" />
             Get in Touch
           </h2>
           <div

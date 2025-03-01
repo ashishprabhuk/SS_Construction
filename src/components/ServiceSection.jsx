@@ -7,7 +7,7 @@ const ServicesSection = () => {
     <section className="py-5 bg-light">
       <Container>
         <h2 className="text-center mb-5 display-4 fw-bold text-dark">
-          Services We Do
+          Services Offered
         </h2>
         
         <Row className="g-4">

@@ -13,7 +13,7 @@ const AboutSection = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="section-overview py-5">
+      <section className="section-overview pt-2 pb-5">
         <Container>
           <Row className="align-items-center">
             <Col md={6}>
