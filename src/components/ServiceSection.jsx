@@ -1,61 +1,66 @@
-import { Container, Row, Col, Card, ListGroup, Image } from 'react-bootstrap';
-import { FiCheckCircle } from 'react-icons/fi';
-import { services } from '../Models/Services';
+import { Container, Row, Col, Card, ListGroup, Image } from "react-bootstrap";
+import { FiCheckCircle } from "react-icons/fi";
+import { services } from "../Models/Services";
+import ServiceStackCards from "./ServiceStackCards";
 
 const ServicesSection = () => {
   return (
-    <section className="py-5 bg-light">
-      <Container>
-        <h2 className="text-center mb-5 display-4 fw-bold text-dark">
-          Services Offered
-        </h2>
-        
-        <Row className="g-4">
-          {services.map((service, index) => (
-            <Col key={index} md={6} lg={4}>
-              <Card className="h-100 shadow-sm border-0 overflow-hidden service-card">
-                {/* Image Section */}
-                <div className="position-relative image-container">
-                  <Image 
-                    src={service.image} 
-                    fluid 
-                    className="card-img-top service-image"
-                    style={{ height: '200px', objectFit: 'cover' }}
-                    alt={service.title}
-                  />
-                  <div className="position-absolute bottom-0 start-0 w-100 p-3 bg-dark bg-opacity-75 title-overlay">
-                    <Card.Title className="h4 mb-0 text-white">
-                      {service.title}
-                    </Card.Title>
-                  </div>
-                </div>
+    <>
+      <section className="py-5 bg-light">
+        <Container>
+          <h2 className="text-center mb-5 display-4 fw-bold text-dark">
+            Services Offered
+          </h2>
+        <ServiceStackCards />
 
-                <Card.Body className="p-4">
-                  <div className="d-flex align-items-center mb-3 icon-container">
-                    <div>
-                      <p className="mb-0 text-muted features-label ">Key Features</p>
+          <Row className="g-4">
+            {services.map((service, index) => (
+              <Col key={index} md={6} lg={4}>
+                <Card className="h-100 shadow-sm border-0 overflow-hidden service-card">
+                  {/* Image Section */}
+                  <div className="position-relative image-container">
+                    <Image
+                      src={service.image}
+                      fluid
+                      className="card-img-top service-image"
+                      style={{ height: "200px", objectFit: "cover" }}
+                      alt={service.title}
+                    />
+                    <div className="position-absolute bottom-0 start-0 w-100 p-3 bg-dark bg-opacity-75 title-overlay">
+                      <Card.Title className="h4 mb-0 text-white">
+                        {service.title}
+                      </Card.Title>
                     </div>
                   </div>
-                  
-                  <ListGroup variant="flush" className="border-top">
-                    {service.advantages.map((advantage, idx) => (
-                      <ListGroup.Item 
-                        key={idx} 
-                        className="border-0 px-0 py-2 d-flex align-items-start list-item"
-                      >
-                        <FiCheckCircle className="text-success me-2 mt-1 flex-shrink-0 list-icon" />
-                        <span className="text-secondary">{advantage}</span>
-                      </ListGroup.Item>
-                    ))}
-                  </ListGroup>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
 
-      <style>{`
+                  <Card.Body className="p-4">
+                    <div className="d-flex align-items-center mb-3 icon-container">
+                      <div>
+                        <p className="mb-0 text-muted features-label ">
+                          Key Features
+                        </p>
+                      </div>
+                    </div>
+
+                    <ListGroup variant="flush" className="border-top">
+                      {service.advantages.map((advantage, idx) => (
+                        <ListGroup.Item
+                          key={idx}
+                          className="border-0 px-0 py-2 d-flex align-items-start list-item"
+                        >
+                          <FiCheckCircle className="text-success me-2 mt-1 flex-shrink-0 list-icon" />
+                          <span className="text-secondary">{advantage}</span>
+                        </ListGroup.Item>
+                      ))}
+                    </ListGroup>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+
+        <style>{`
         .service-card {
           transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           border-radius: 1rem;
@@ -107,21 +112,22 @@ const ServicesSection = () => {
 
         .list-item {
           transition: all 0.3s ease;
-        }
+          }
 
-        .service-card:hover .list-item {
+          .service-card:hover .list-item {
           transform: translateX(8px);
         }
 
         .list-icon {
           transition: all 0.3s ease;
-        }
-
-        .service-card:hover .list-icon {
+          }
+          
+          .service-card:hover .list-icon {
           transform: scale(1.2);
-        }
-      `}</style>
-    </section>
+          }
+          `}</style>
+      </section>
+    </>
   );
 };
 

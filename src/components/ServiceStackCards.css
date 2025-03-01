@@ -1,0 +1,27 @@
+.service-card {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+  }
+  
+  .service-icon {
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .icon-wrapper {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  
+  .service-card:hover .service-icon {
+    transform: scale(1.1);
+  }
