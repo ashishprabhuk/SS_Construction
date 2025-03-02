@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ssLogo from "../assets/sscon.png";
+import scroll from "../assets/Footer/scroll-light.svg";
 import "./Header.css";
 
 export default function Header() {
@@ -53,6 +54,7 @@ export default function Header() {
             id="req-btn"
             onClick={() => setExpanded(false)}
           >
+            <img src={scroll} alt="scroll"/>
             Request a quote
           </Link>
         </Navbar.Collapse>

@@ -1,27 +1,9 @@
-.service-card {
-    transition: all 0.3s ease;
-    transform: translateY(0);
+
+.icon-wrapper {
+      transition: none;
   }
-  
-  .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
-  }
-  
-  .service-icon {
-    font-size: 2.5rem;
-    transition: all 0.3s ease;
-  }
-  
-  .icon-wrapper {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-  }
-  
-  .service-card:hover .service-icon {
-    transform: scale(1.1);
-  }
+
+  .service-card:hover .icon-wrapper {
+    transform: none;
+    background: transparent;
+}

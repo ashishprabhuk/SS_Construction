@@ -3,8 +3,7 @@ import user_icon from "../assets/Services/users-light.png";
 import notebook_icon from "../assets/Services/notebook-light.png";
 import flask_icon from "../assets/Services/flask-light.png";
 import truck_icon from "../assets/Services/truck-light.png";
-
-// import "./ServiceStackCards.css";
+import "./ServiceStackCards.css";
 
 const services = [
   {

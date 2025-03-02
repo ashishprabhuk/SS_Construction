@@ -116,6 +116,7 @@
 import { useState, useEffect } from 'react';
 import TextFlip from './TextFlip';
 import './ImageSlider.css';
+import TypingAnimation from './TypingAnimation';
 
 const ImageSlider = ({ images = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -160,9 +161,9 @@ const ImageSlider = ({ images = [] }) => {
         ))}
       </div>
 
-      {/* Centered Text Overlay with Flip Animation */}
       <div className="image-slider-text-overlay">
-        <TextFlip words={["quality", "service", "safety"]} interval={3000} />
+        {/* <TextFlip words={["quality", "service", "safety"]} interval={3000} /> */}
+        <TypingAnimation />
       </div>
 
       {/* Progress Bar */}

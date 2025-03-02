@@ -1,11 +1,8 @@
-import { Button, Container, Row, Col, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import "./Home.css";
 import ImageSlider from "../components/ImageSlider";
 import { sliderImages } from "../Models/Slides";
 import { images } from "../Models/RollerImages";
 import ImageRoller from "../components/ImageRoller";
-import PlantMachinery from "../components/PlantMachinery";
 import Plant from "../components/Plant";
 import WhyChoose from "../components/WhyChoose";
 

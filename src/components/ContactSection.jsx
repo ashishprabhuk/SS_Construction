@@ -595,24 +595,17 @@ const ContactSection = () => {
                           </Form.Group>
                         </Col>
 
-                        <Col md={12} className="my-4">
-                          <ReCAPTCHA
-                            sitekey="YOUR_RECAPTCHA_SITE_KEY"
-                            onChange={(val) => setRecaptchaValue(val)}
-                            className="d-flex justify-content-center"
-                          />
-                        </Col>
-
-                        <Col md={12}>
+                        <Col md={12} className="d-flex align-content-center">
                           <Button
                             variant="primary"
                             type="submit"
-                            className="w-100 py-3 fw-bold text-uppercase"
+                            className=" w-50 py-3 "
                             style={{
                               fontSize: "1.1rem",
                               letterSpacing: "1px",
                               transition: "all 0.3s ease",
                             }}
+                            id="req-btn"
                           >
                             Send Message
                           </Button>

@@ -1,36 +1,53 @@
-import { Container, Row, Col, Card, ListGroup } from 'react-bootstrap';
-import { FaBuilding, FaEye, FaBullseye, FaUsers, FaFlask } from 'react-icons/fa';
-import profile from "../assets/About/Profile.jpg"
-import './AboutSection.css'; 
+import { Container, Row, Col, Card, ListGroup } from "react-bootstrap";
+import {
+  FaBuilding,
+  FaEye,
+  FaBullseye,
+  FaUsers,
+  FaFlask,
+} from "react-icons/fa";
+import profile from "../assets/About/Profile.jpg";
+import ceo from "../assets/About/ceo.jpg";
+import companyImage from "../assets/About/flag.jpg";
+import lab from "../assets/About/labsc.jpg";
+import "./AboutSection.css";
+import { FiCheckCircle } from "react-icons/fi";
 
 const AboutSection = () => {
   return (
-    <Container fluid className="about-us-page bg-#FCF5EB">
+    <Container fluid className="about-us-page bg-light">
       {/* Hero Section */}
-      <section className="hero-section text-center py-5 bg-#FCF5EB">
-        <h1 className="display-4 fw-bold mb-3">About Us</h1>
+      <section className="hero-section text-center py-5">
+        <h1 className="display-4 fw-bold my-3">About Us</h1>
         <p className="lead">Building Strong Foundations Since 2020</p>
       </section>
 
       {/* Overview Section */}
-      <section className="section-overview pt-2 pb-5  bg-#FCF5EB">
+      <section className="section-overview py-5 bg-white">
         <Container>
           <Row className="align-items-center">
-            <Col md={6}>
-              <h2 className="section-title mb-4">
-                <FaBuilding className="me-2" />
-                Company Overview
+            <Col md={6} className="mb-4 mb-md-0">
+              <h2 className="section-title mb-4 d-flex align-items-center">
+                <FaBuilding className="me-2" /> Company Overview
               </h2>
-              <p className="lead">
-                SS Ultra Ready Mix Concrete is an established Ready Mix Concrete Company in Tiruchirappalli driven by rich experienced professionals in the Concrete Industry.
+              {/* <div id="fading-line" className="mb-5"></div> */}
+              <p className="lead pt-2">
+                SS Ultra Ready Mix Concrete is an established Ready Mix Concrete
+                Company in Tiruchirappalli, driven by experienced professionals
+                in the concrete industry.
               </p>
-              <p>
-                We are committed to producing high-quality as well as cost-effective products to suit every segment of the Construction Industry.
+              <p className="lead pt-2">
+                We are committed to producing high-quality, cost-effective
+                products to suit every segment of the construction industry.
               </p>
             </Col>
-            <Col md={6}>
-              {/* Add your company photo here */}
-              <div className="about-image placeholder-image"></div>
+            <Col md={6} className="text-center">
+              <img
+              style={{ borderRadius: "20px" }}
+                src={companyImage}
+                alt="Company Overview"
+                className="img-fluid"
+              />
             </Col>
           </Row>
         </Container>
@@ -39,29 +56,74 @@ const AboutSection = () => {
       {/* Vision & Mission Section */}
       <section className="vision-mission py-5 bg-light">
         <Container>
-          <Row>
-            <Col md={6} className="mb-4">
-              <Card className="h-100 vision-card">
+          <Row className="g-4">
+            <Col md={6}>
+              <Card
+                className="h-100 p-4 vision-card"
+                style={{ borderRadius: "20px" }}
+              >
                 <Card.Body>
                   <FaEye className="display-4 text-primary mb-3" />
-                  <h3>Our Vision</h3>
-                  <Card.Text>
-                    To be the leading provider of innovative, high-quality ready-mix concrete solutions, delivering sustainable and reliable products that drive the success of our clients and contribute to building stronger communities.
+                  <h3
+                    className="pb-3"
+                    style={{
+                      letterSpacing: "2px",
+                      textAlign: "start",
+                      fontSize: "1.5rem",
+                    }}
+                  >
+                    Our Vision
+                  </h3>
+                  <Card.Text
+                    className="text-secondary"
+                    style={{ letterSpacing: "1px", fontSize: "1.2rem" }}
+                  >
+                    To be the leading provider of innovative, high-quality
+                    ready-mix concrete solutions, delivering sustainable and
+                    reliable products that drive the success of our clients and
+                    contribute to building stronger communities.
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
-            
             <Col md={6}>
-              <Card className="h-100 mission-card">
+              <Card
+                className="h-100 p-4 mission-card"
+                style={{ borderRadius: "20px" }}
+              >
                 <Card.Body>
                   <FaBullseye className="display-4 text-success mb-3" />
-                  <h3>Our Mission</h3>
-                  <ListGroup variant="flush">
-                    <ListGroup.Item>Deliver superior value to stakeholders</ListGroup.Item>
-                    <ListGroup.Item>Exceptional customer service</ListGroup.Item>
-                    <ListGroup.Item>Consistent quality products</ListGroup.Item>
-                    <ListGroup.Item>Continuous team development</ListGroup.Item>
+                  <h3
+                    className="pb-3"
+                    style={{
+                      letterSpacing: "2px",
+                      textAlign: "start",
+                      fontSize: "1.5rem",
+                    }}
+                  >
+                    Our Mission
+                  </h3>
+                  <ListGroup
+                    variant="flush"
+                    className="text-start"
+                    style={{ letterSpacing: "1px", fontSize: "1.2rem" }}
+                  >
+                    <ListGroup.Item className="d-flex align-items-center text-secondary">
+                      <FiCheckCircle className="text-success me-2 mt-1 flex-shrink-0" />{" "}
+                      Deliver superior value to stakeholders
+                    </ListGroup.Item>
+                    <ListGroup.Item className="d-flex align-items-center text-secondary">
+                      <FiCheckCircle className="text-success me-2 mt-1 flex-shrink-0" />{" "}
+                      Exceptional customer service
+                    </ListGroup.Item>
+                    <ListGroup.Item className="d-flex align-items-center text-secondary">
+                      <FiCheckCircle className="text-success me-2 mt-1 flex-shrink-0" />{" "}
+                      Consistent quality products
+                    </ListGroup.Item>
+                    <ListGroup.Item className="d-flex align-items-center text-secondary">
+                      <FiCheckCircle className="text-success me-2 mt-1 flex-shrink-0" />{" "}
+                      Continuous team development
+                    </ListGroup.Item>
                   </ListGroup>
                 </Card.Body>
               </Card>
@@ -71,27 +133,44 @@ const AboutSection = () => {
       </section>
 
       {/* Lab Section */}
-      <section className="lab-section py-5">
+      <section className="lab-section py-5 bg-white">
         <Container>
-          <h2 className="section-title text-center mb-5">
-            <FaFlask className="me-2" />
-            Our Laboratory
+          <h2 className="text-center mb-5">
+            <FaFlask className="me-2" /> Our Laboratory
           </h2>
-          <Row className="g-4">
-            <Col md={6}>
-              <div className="lab-image placeholder-image"></div>
+          <Row className="align-items-center g-4">
+            <Col md={7} className="text-center">
+              <img
+                style={{ borderRadius: "20px" }}
+                src={lab}
+                alt="Our Laboratory"
+                className="img-fluid"
+              />
             </Col>
-            <Col md={6}>
-              <div className="lab-content">
-                <h4>Quality Assurance Lab</h4>
-                <ul className="lab-features">
-                  <li>State-of-the-art in-house testing facility</li>
-                  <li>New concrete product development</li>
-                  <li>Trial mixes for new projects</li>
-                  <li>Material quality testing</li>
-                  <li>Highly skilled technicians</li>
-                </ul>
-              </div>
+            <Col md={5} id="qal-para">
+              <h4 className="pb-2">Quality Assurance Lab</h4>
+              <ul className="lab-features list-unstyled text-start">
+                <li className="d-flex align-items-center">
+                  <FiCheckCircle className="text-success me-2 flex-shrink-0" />
+                  Consistent quality products & State-of-the-art in-house testing facility
+                </li>
+                <li className="d-flex align-items-center">
+                  <FiCheckCircle className="text-success me-2 flex-shrink-0" />
+                  New concrete product development
+                </li>
+                <li className="d-flex align-items-center">
+                  <FiCheckCircle className="text-success me-2 flex-shrink-0" />
+                  Trial mixes for new projects
+                </li>
+                <li className="d-flex align-items-center">
+                  <FiCheckCircle className="text-success me-2 flex-shrink-0" />
+                  Material quality testing
+                </li>
+                <li className="d-flex align-items-center">
+                  <FiCheckCircle className="text-success me-2 flex-shrink-0" />
+                  Highly skilled technicians
+                </li>
+              </ul>
             </Col>
           </Row>
         </Container>
@@ -100,38 +179,37 @@ const AboutSection = () => {
       {/* Management Section */}
       <section className="management-section py-5 bg-light">
         <Container>
-          <h2 className="section-title text-center mb-5">
-            <FaUsers className="me-2" />
-            Leadership Team
+          <h2 className="text-center mb-5">
+            <FaUsers className="me-2 display-6" /> Leadership Team
           </h2>
-          <Row className="g-4 justify-content-center">
-            {/* Managing Director */}
+          <Row className="g-4 gap-4 justify-content-center">
             <Col md={6} lg={5}>
-              <Card className="management-card h-100">
-                <Card.Img variant="top" src={profile} />
-                <Card.Body>
+              <Card style={{borderRadius:"20px"}} className="management-card  h-100 text-center">
+                <Card.Img variant="top" src={ceo} style={{borderRadius:"20px 20px 0px 0px"}} />
+                <Card.Body style={{ backgroundColor: "#fcf5eb", borderRadius:"0px 0px 20px 20px" }}>
                   <Card.Title>Er. S. Sakthivel</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
+                  <Card.Subtitle style={{color:"#25D366"}} className=" mb-2">
                     Managing Director & CFO
                   </Card.Subtitle>
-                  <Card.Text>
-                    M.Tech (Structural Engineering) with 30+ years experience. Founder of Arutjothi Constructions. Driving excellence in concrete production.
+                  <Card.Text className="text-secondary pb-2">
+                    M.Tech (Structural Engineering) with 30+ years experience.
+                    Founder of Arutjothi Constructions. <br />
+                    Driving excellence inconcrete production.
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
-
-            {/* CEO */}
             <Col md={6} lg={5}>
-              <Card className="management-card h-100">
-                <Card.Img variant="top" src={profile} />
-                <Card.Body>
+              <Card style={{borderRadius:"20px"}} className="management-card h-100 text-center">
+                <Card.Img variant="top" src={profile}  style={{borderRadius:"20px 20px 0px 0px"}}/>
+                <Card.Body style={{ backgroundColor: "#fcf5eb", borderRadius:"0px 0px 20px 20px" }}>
                   <Card.Title>Er. S. Srivarsan</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
+                  <Card.Subtitle style={{color:"#25D366"}} className="mb-2">
                     Chief Executive Officer
                   </Card.Subtitle>
-                  <Card.Text>
-                    B.E. Civil Engineering. Technology-driven leader focused on sustainable construction and operational excellence.
+                  <Card.Text className="text-secondary pb-2">
+                    B.E. Civil Engineering. Technology-driven <br /> 
+                    leader focused on sustainable construction and operational excellence.
                   </Card.Text>
                 </Card.Body>
               </Card>
