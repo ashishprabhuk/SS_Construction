@@ -1,0 +1,40 @@
+.quote-container {
+    max-width: 1000px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+  }
+  
+  .section-title {
+    color: #25D366;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #25D366;
+    padding-bottom: 0.5rem;
+  }
+  
+  .required::after {
+    content: "*";
+    color: #e74c3c;
+    margin-left: 3px;
+  }
+  
+  .form-control:focus {
+    border-color: #25D366;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+  }
+
+  .req-form-btn{
+    background-color: #25D366;
+  border: 1.5px solid #1A1A19;
+  padding: 10px 20px;
+  color: #1A1A19;
+  border-radius: 25px;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  }
+
+  .req-form-btn:hover {
+    background-color: #1A1A19;
+    color: #fff;
+    border: 1.5px solid #1A1A19;
+    transform: scale(1.05);
+  }
