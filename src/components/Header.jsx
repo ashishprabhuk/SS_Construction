@@ -11,7 +11,7 @@ export default function Header() {
     <Navbar
       expanded={expanded}
       onToggle={setExpanded}
-      className="header bg-#FCF5EB"
+      className="header bg-#FCF5EB border-bottom border-1 border-dark"
       variant="light"
       expand="lg"
       fixed="top"

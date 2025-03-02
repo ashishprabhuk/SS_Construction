@@ -1,9 +1,7 @@
-/* ImageSlider.css */
 .image-slider {
     --image-slider-primary: #25D366;
     --image-slider-secondary: #ffd500;
     --image-slider-text: #f8fafc;
-    --image-slider-overlay: linear-gradient(45deg, rgba(59, 7, 100, 0.7), rgba(37, 99, 235, 0.5));
     --image-slider-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     --image-slider-radius: 0px;
     --image-slider-glass: rgba(255, 255, 255, 0.1);
@@ -47,16 +45,6 @@
     animation: image-slider-reveal 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0.3s forwards;
   }
   
-  /* .image-slider-content {
-    max-width: 90%;
-    padding: 2rem;
-    margin: 0 1rem;
-    background: var(--image-slider-glass);
-    border: var(--image-slider-glass-border);
-    transform: translateY(20px);
-    opacity: 0;
-    animation: image-slider-reveal 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0.3s forwards;
-  } */
   
   @keyframes image-slider-reveal {
     to {
@@ -172,7 +160,6 @@
     transform: scale(1.3);
   }
   
-  /* Responsive Design */
   @media (max-width: 768px) {
     .image-slider {
       height: 70vh;
@@ -202,3 +189,34 @@
       font-size: 1rem;
     }
   }
+  
+  /* Add these styles to the existing ImageSlider.css file */
+
+.image-slider-text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  background: var(--image-slider-overlay, rgba(0, 0, 0, 0.3));
+  animation: fade-in 1s ease forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Update the main overlay styles to accommodate the new text flip component */
+.image-slider-overlay {
+  opacity: 0;
+  transform: translateY(20px);
+}

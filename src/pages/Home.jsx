@@ -2,16 +2,18 @@ import { Button, Container, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import ImageSlider from "../components/ImageSlider";
-import { slides } from "../Models/Slides";
+import { sliderImages } from "../Models/Slides";
 import { images } from "../Models/RollerImages";
 import ImageRoller from "../components/ImageRoller";
+import PlantMachinery from "../components/PlantMachinery";
 
 export default function Home() {
+
   return (
     <>
       {/* Slider Section */}
       <section className="hero">
-        <ImageSlider slides={slides} />
+        <ImageSlider images={sliderImages} />
       </section>
 
       {/* Features Section */}
@@ -65,6 +67,10 @@ export default function Home() {
             </Col>
           </Row>
         </Container>
+      </section>
+
+      <section>
+        <PlantMachinery/>
       </section>
 
       {/* CTA Section */}

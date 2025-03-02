@@ -1,5 +1,6 @@
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { FaUsers, FaFlask, FaBookOpen, FaMobileAlt } from 'react-icons/fa';
+// import "./ServiceStackCards.css";
 
 const services = [
   {
@@ -27,11 +28,11 @@ const services = [
 const ServiceStackCards = () => {
   return (
     <Container className="pt-2 pb-4">
-      <Row className="g-4 flex-nowrap overflow-auto pb-4">
+      <Row className="g-4 flex-nowrap overflow-auto px-5 pb-4">
         {services.map((service, index) => (
           <Col key={index} xs={12} md={6} lg={3} className="d-flex">
             <Card 
-              className="h-100 shadow-lg border-0 rounded-4 service-card"
+              className="h-100 shadow-md border-2 rounded-4 service-card"
               style={{ minWidth: '250px' }}
             >
               <Card.Body className="text-center p-4 d-flex flex-column">

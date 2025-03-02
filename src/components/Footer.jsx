@@ -2,8 +2,9 @@
 import { Container, Row, Col, Nav } from "react-bootstrap";
 import "./Footer.css";
 import { Link } from "react-router-dom";
-import iaf from "../assets/iaf.png";
-import uaf from "../assets/logo3.png";
+import agac from "../assets/Footer/agac.jpeg";
+import iaf from "../assets/Footer/iaf.jpeg";
+import oa from "../assets/Footer/oa.jpeg";
 
 export default function Footer() {
   return (
@@ -40,7 +41,13 @@ export default function Footer() {
 
         <Row>
           <Col className="d-flex flex-column justify-content-center align-items-center">
-            <div className="iso-certification bg-white p-3 rounded">
+            <div className="iso-certification p-3 rounded">
+              <img
+                src={agac}
+                alt="ISO Certification"
+                className="img-fluid"
+                style={{ maxHeight: "100px" }}
+              />
               <img
                 src={iaf}
                 alt="ISO Certification"
@@ -48,7 +55,7 @@ export default function Footer() {
                 style={{ maxHeight: "100px" }}
               />
               <img
-                src={uaf}
+                src={oa}
                 alt="ISO Certification"
                 className="img-fluid"
                 style={{ maxHeight: "100px" }}

@@ -1,0 +1,232 @@
+/* .plant-machinery {
+    background-color: #f8f9fa;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  h2 {
+    font-weight: 700;
+    color: #343a40;
+  }
+  
+  .card {
+    border: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-card {
+    overflow: hidden;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .feature-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .feature-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  .feature-card .card-body {
+    text-align: center;
+  }
+  
+  .feature-card .card-title {
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  .feature-card .card-text {
+    font-size: 14px;
+    color: #6c757d;
+  }
+  
+  .table {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .table th {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+  }
+  
+  .table td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .shadow-lg {
+    border-radius: 12px;
+  }
+  
+  @media (max-width: 768px) {
+    .feature-card img {
+      height: 180px;
+    }
+  }
+   */
+
+   .modern-container {
+    background: #f8faff;
+    padding: 2rem !important;
+  }
+  
+  .section-title {
+    color: #2a3b4d;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  
+  .section-title::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: #4a90e2;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .modern-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .modern-card-header {
+    background: linear-gradient(135deg, #4a90e2 0%, #2b5aa0 100%);
+    color: white !important;
+    padding: 1.5rem 2rem;
+    border: none;
+  }
+  
+  .accent-line {
+    width: 40px;
+    height: 3px;
+    background: #fff;
+    margin-top: 1rem;
+    opacity: 0.7;
+  }
+  
+  .specs-box {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
+  
+  .spec-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .spec-item:last-child {
+    border-bottom: none;
+  }
+  
+  .spec-label {
+    color: #6c757d;
+    font-weight: 500;
+  }
+  
+  .spec-value {
+    color: #2a3b4d;
+    font-weight: 600;
+  }
+  
+  .feature-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-image {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .feature-content {
+    padding: 1.5rem;
+  }
+  
+  .feature-content h5 {
+    color: #2a3b4d;
+    margin-bottom: 0.75rem;
+  }
+  
+  .modern-table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  
+  .modern-table th {
+    background: #f4f7fb;
+    color: #4a90e2;
+    font-weight: 600;
+    padding: 1rem;
+  }
+  
+  .modern-table td {
+    padding: 1rem;
+    vertical-align: middle;
+  }
+  
+  .table-index {
+    font-weight: 600;
+    color: #4a90e2;
+  }
+  
+  .brand-badge {
+    background: #e8f0fe;
+    color: #2b5aa0;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9em;
+  }
+  
+  .unit-count {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #4a90e2;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+  }
+  
+  .hover-table tr {
+    transition: background-color 0.2s ease;
+  }
+  
+  .badge-modern {
+    background: #e8f0fe;
+    color: #2b5aa0;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 500;
+  }

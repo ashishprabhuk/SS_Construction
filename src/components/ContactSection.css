@@ -1,0 +1,9 @@
+.border-end-lg {
+    border-right: 1px solid #dee2e6 !important;
+  }
+  
+  @media (min-width: 992px) {
+    .border-end-lg {
+      border-right: 2px solid #dee2e6 !important;
+    }
+  }
