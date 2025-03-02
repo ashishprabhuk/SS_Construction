@@ -107,3 +107,7 @@
     font-size: 25px;
   }
 }
+
+#wcu-box{
+  border-radius: 25px !important;
+}

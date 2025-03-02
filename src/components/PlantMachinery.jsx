@@ -372,8 +372,8 @@ const PlantMachinery = () => {
   return (
     <div className="p-4 modern-container">
       <h2 className="mb-4 section-title">Plant & Machinery</h2>
+      <div id="fading-line"></div>
       
-      {/* Batching Plant Section */}
       <motion.div whileHover={{ scale: 1.005 }}>
         <Card className="mb-4 modern-card">
           <Card.Header className="modern-card-header">

@@ -1,44 +1,4 @@
-/* footer {
-    background-color: #1a1a1a;
-  }
-  
-  footer a {
-    transition: color 0.3s ease;
-  }
-  
-  footer a:hover {
-    color: #ff3e3e !important;
-  }
-  
-  .bi {
-    vertical-align: -.125em;
-    transition: color 0.3s ease;
-  }
-  
-  .bi:hover {
-    color: #0d6efd !important;
-  }
-
-  #dev-link{
-    text-decoration: none;
-    color: #fff;
-  }
-
-  .fading-line {
-    width: 100%;
-    height: 0.5px;
-    background: linear-gradient(to right, transparent, #fff, transparent);
-    margin: 10px 0;
-  }
-  
-  @media (max-width: 576px) {
-    .iso-certification {
-      flex-direction: row !important;
-    }
-  }
-   */
-
-   .footer-wrapper {
+.footer-wrapper {
     background: #111B21;
     position: relative;
     overflow: hidden;
@@ -48,15 +8,14 @@
     font-size: 1.1rem;
     letter-spacing: 1px;
   }
-  
-  .iso-certification {
-    background: rgba(255, 255, 255, 0.05);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+
+  .iso-certification{
+    margin-left: 20px;
+    padding-left: 95px;
   }
   
   .certification-img {
-    max-height: 80px;
+    max-height: 120px;
     transition: transform 0.3s ease;
   }
   
@@ -74,8 +33,8 @@
   }
   
   .social-links .btn:hover {
-    background: #25D366;
-    border-color: #25D366;
+    background: #004B8F;
+    border-color: #004B8F;
     transform: translateY(-2px);
   }
   
@@ -91,12 +50,27 @@
     left: 0;
     width: 0;
     height: 1px;
-    background: #25D366;
+    background: #004B8F;
     transition: width 0.3s ease;
   }
   
   .hover-accent:hover::after {
     width: 100%;
+  }
+
+  footer a:hover {
+    color: #e4e4e4 !important;
+  }
+  
+  #cont-a{
+    text-decoration: none;
+  }
+
+  .fading-line {
+    width: 100%;
+    height: 0.5px;
+    background: linear-gradient(to right, transparent, #fff, transparent);
+    margin: 10px 0;
   }
   
   @media (max-width: 768px) {
@@ -115,7 +89,10 @@
     .social-links {
       justify-content: center;
     }
-  }
+
+    .social-linkss:hover{
+      color: #004B8F;
+    }
 
   
   /* footer {

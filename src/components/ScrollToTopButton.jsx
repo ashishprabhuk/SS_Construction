@@ -39,7 +39,7 @@ export default function ScrollToTopButton() {
           justifyContent: "center"
         }}
       >
-        <img src={UpArrow} alt="Scroll to Top" style={{ width: "20px", height: "20px" }} />
+        <img src={UpArrow} alt="Scroll to Top" style={{ width: "15px", height: "15px" }} />
       </Button>
     )
   );

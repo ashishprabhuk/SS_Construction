@@ -1,0 +1,15 @@
+#plant-title{
+    font-weight: 600;
+    color: #111B21;
+}
+
+#fading-line {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #111B21, transparent);
+    margin: 15px 0 5px 0;
+  }
+
+  /* #plant-bgc{
+    background: linear-gradient(to bottom, #111B21, #FCF5EB);
+  } */

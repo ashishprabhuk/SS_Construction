@@ -8,9 +8,9 @@ const ServicesSection = () => {
     <>
       <section className="py-5 bg-#FCF5EB">
         <Container>
-          <h2 className="text-center mb-5 display-4 fw-bold text-dark">
+        <h3 id="plant-title" className="text-center py-3 mb-2 display-6">
             Services Offered
-          </h2>
+          </h3>
         <ServiceStackCards />
 
           <Row className="g-4">
