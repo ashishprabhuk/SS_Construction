@@ -79,12 +79,12 @@
    */
 
    .modern-container {
-    background: #f8faff;
+    background: #FCF5EB;
     padding: 2rem !important;
   }
   
   .section-title {
-    color: #2a3b4d;
+    color: #25D366;
     font-weight: 600;
     text-align: center;
     position: relative;
@@ -95,7 +95,7 @@
     content: '';
     width: 60px;
     height: 3px;
-    background: #4a90e2;
+    background: #25D366;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -111,7 +111,7 @@
   }
   
   .modern-card-header {
-    background: linear-gradient(135deg, #4a90e2 0%, #2b5aa0 100%);
+    background: linear-gradient(135deg, #25D366 0%, #2b5aa0 100%);
     color: white !important;
     padding: 1.5rem 2rem;
     border: none;
@@ -149,7 +149,7 @@
   }
   
   .spec-value {
-    color: #2a3b4d;
+    color: #25D366;
     font-weight: 600;
   }
   
@@ -183,7 +183,7 @@
   
   .modern-table th {
     background: #f4f7fb;
-    color: #4a90e2;
+    color: #25d365b7;
     font-weight: 600;
     padding: 1rem;
   }
@@ -195,13 +195,15 @@
   
   .table-index {
     font-weight: 600;
-    color: #4a90e2;
+    color: #25d365b7;
   }
   
   .brand-badge {
     background: #e8f0fe;
-    color: #2b5aa0;
+    color: #25D366;
+    font-weight: 500;
     padding: 0.3rem 0.8rem;
+    border: 1px solid #25D366;
     border-radius: 20px;
     font-size: 0.9em;
   }
@@ -210,7 +212,7 @@
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: #4a90e2;
+    background: #25D366;
     color: white;
     border-radius: 50%;
     text-align: center;

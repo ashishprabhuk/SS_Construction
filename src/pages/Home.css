@@ -20,6 +20,11 @@
 
 
   /* Home.css */
+
+  .home-page{
+    background-color: #FCF5EB;
+  }
+
   .hero {
     display: flex;
     align-items: center;
@@ -82,5 +87,23 @@
 
   .cta-section .btn {
     width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .display-6 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .display-6 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .display-6 {
+    font-size: 25px;
   }
 }

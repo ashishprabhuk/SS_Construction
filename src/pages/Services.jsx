@@ -1,14 +1,9 @@
-import ServicesSection from '../components/ServiceSection'
+import ServicesSection from '../components/ServiceSection';
+import "./Services.css";
 
 export default function Services() {
-  // const services = [
-  //   { title: 'Service 1', description: 'Services we do...' },
-  //   { title: 'Service 2', description: 'Services we do...' },
-  //   { title: 'Service 3', description: 'Services we do...' },
-  // ]
-
   return (
-    <section className="py-5 bg-light">
+    <section className="service-page py-5">
       <ServicesSection/>
     </section>
   )

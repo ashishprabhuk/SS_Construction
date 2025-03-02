@@ -6,7 +6,7 @@ import ServiceStackCards from "./ServiceStackCards";
 const ServicesSection = () => {
   return (
     <>
-      <section className="py-5 bg-light">
+      <section className="py-5 bg-#FCF5EB">
         <Container>
           <h2 className="text-center mb-5 display-4 fw-bold text-dark">
             Services Offered

@@ -329,8 +329,6 @@
 import { Card, Table, Row, Col, Image } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import './PlantMachinery.css'; 
-
-// Placeholder images - replace with actual images
 import mixingQualityImg from '../assets/Footer/chi.jpg';
 import controlSystemImg from '../assets/Footer/acs.png';
 
@@ -351,8 +349,7 @@ const PlantMachinery = () => {
         { id: 13, detail: 'Control System' },
         { id: 14, detail: 'Discharge Height' },
       ];
-    
-      // Equipment List Data
+
       const equipmentList = [
         { id: 1, name: 'Batching Plant', make: 'AJAX', capacity: '45 Cum/Hr', available: 1 },
         { id: 2, name: 'Cement feeding Blower', make: 'Twin Lobe', capacity: '50HP', available: 1 },

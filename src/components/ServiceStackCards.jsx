@@ -37,7 +37,7 @@ const ServiceStackCards = () => {
             >
               <Card.Body className="text-center p-4 d-flex flex-column">
                 <div className="icon-wrapper mb-3 mx-auto">
-                  <span className="service-icon text-primary">
+                  <span className="service-icon" style={{ color: '#25D366' }}>
                     {service.icon}
                   </span>
                 </div>

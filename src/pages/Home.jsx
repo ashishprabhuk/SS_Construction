@@ -8,16 +8,15 @@ import ImageRoller from "../components/ImageRoller";
 import PlantMachinery from "../components/PlantMachinery";
 
 export default function Home() {
-
   return (
-    <>
+    <div className="home-page">
       {/* Slider Section */}
       <section className="hero">
         <ImageSlider images={sliderImages} />
       </section>
 
       {/* Features Section */}
-      <section className="py-5 bg-light">
+      <section className="py-5 bg-#FCF5EB">
         <Container>
           <h2 className="text-center mb-5">Why Choose Us</h2>
           <Row>
@@ -70,7 +69,7 @@ export default function Home() {
       </section>
 
       <section>
-        <PlantMachinery/>
+        <PlantMachinery />
       </section>
 
       {/* CTA Section */}
@@ -87,12 +86,12 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="roller py-1">
-      <h4 className="text-center mt-2 mb-5 display-6 fw-bold text-dark">
+      <section className="roller py-3">
+        <h4 className="text-center mt-2 mb-5 display-6 fw-bold text-dark">
           Building Success Together
         </h4>
         <ImageRoller images={images} slideDuration={20} imageWidth={150} />
       </section>
-    </>
+    </div>
   );
 }

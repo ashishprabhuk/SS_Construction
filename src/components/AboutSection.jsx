@@ -5,15 +5,15 @@ import './AboutSection.css';
 
 const AboutSection = () => {
   return (
-    <Container fluid className="about-us-page">
+    <Container fluid className="about-us-page bg-#FCF5EB">
       {/* Hero Section */}
-      <section className="hero-section text-center py-5">
+      <section className="hero-section text-center py-5 bg-#FCF5EB">
         <h1 className="display-4 fw-bold mb-3">About Us</h1>
         <p className="lead">Building Strong Foundations Since 2020</p>
       </section>
 
       {/* Overview Section */}
-      <section className="section-overview pt-2 pb-5">
+      <section className="section-overview pt-2 pb-5  bg-#FCF5EB">
         <Container>
           <Row className="align-items-center">
             <Col md={6}>
