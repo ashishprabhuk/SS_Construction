@@ -255,6 +255,7 @@ const RequestQuoteForm = () => {
                 variant="success" 
                 type="submit" 
                 size="lg"
+                id="req-btn"
                 className="px-5 py-3"
                 disabled={isSubmitting}
               >

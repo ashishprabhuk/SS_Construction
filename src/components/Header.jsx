@@ -54,7 +54,7 @@ export default function Header() {
             id="req-btn"
             onClick={() => setExpanded(false)}
           >
-            <img src={scroll} alt="scroll"/>
+            <img src={scroll} alt="scroll" className="scroll-icon"/>
             Request a quote
           </Link>
         </Navbar.Collapse>
