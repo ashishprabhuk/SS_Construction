@@ -25,7 +25,7 @@ const RequestQuoteForm = () => {
     const formDataObject = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch("https://formsubmit.co/el/bijimi", {
+      const response = await fetch("https://formsubmit.co/ajax/ssultrareadymix@gmail.com", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'

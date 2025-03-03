@@ -23,10 +23,10 @@ export default function Home() {
       </section>
 
       <section className="roller py-3">
-        <h3 id="plant-title" className="text-center mb-2 display-6">
+        <h3 id="plant-title" className="text-center mb-3 display-6">
             Our Esteemed Associates
           </h3>
-          <div id="fading-line" className="mb-5"></div>
+          <div className="section-underline"></div>
         <ImageRoller images={images} slideDuration={20} imageWidth={150} />
       </section>
     </div>

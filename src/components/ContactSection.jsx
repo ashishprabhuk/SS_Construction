@@ -1,10 +1,6 @@
 import { useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import {
-  FaMapMarkerAlt,
-  FaPhone,
-  FaEnvelope,
   FaPaperPlane,
   FaComments
 } from "react-icons/fa";
@@ -12,25 +8,38 @@ import "./ContactSection.css";
 import ContactInfo from "./ContactInfo";
 
 const ContactSection = () => {
-  const [validated, setValidated] = useState(false);
-  const [recaptchaValue, setRecaptchaValue] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formStatus, setFormStatus] = useState(null);
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const form = event.currentTarget;
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setFormStatus(null);
 
-    if (form.checkValidity() === false || !recaptchaValue) {
-      event.stopPropagation();
-      if (!recaptchaValue) alert("Please complete the reCAPTCHA verification");
-    } else {
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
-      console.log(data);
-      alert("Message sent successfully!");
-      form.reset();
-      setRecaptchaValue(null);
+    const formData = new FormData(e.target);
+    const formDataObject = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/ssultrareadymix@gmail.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formDataObject)
+      });
+      
+      if (!response.ok) {
+        throw new Error('Server responded with an error');
+      }
+      
+      setFormStatus('success');
+    } catch (error) {
+      setErrorMessage('There was an error submitting the form. Please try again.');
+      setFormStatus('error');
+    } finally {
+      setIsSubmitting(false);
     }
-    setValidated(true);
   };
 
   return (
@@ -57,7 +66,7 @@ const ContactSection = () => {
                 <p className="text-muted">We'd love to hear from you. Fill out the form below to get in touch.</p>
               </div>
 
-              <Form noValidate validated={validated} onSubmit={handleSubmit} className="integrated-form">
+              <Form noValidate onSubmit={handleSubmit} className="integrated-form">
                 <Row className="g-4">
                   <Col md={3}>
                     <Form.Group controlId="formName" className="form-group">

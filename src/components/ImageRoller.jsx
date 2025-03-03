@@ -6,7 +6,7 @@ const ImageRoller = ({ images, slideDuration, imageWidth, fadeColor = '#FCF5EB',
       overflow: 'hidden',
       position: 'relative',
       width: '100%',
-      margin: '20px 0',
+      margin: '50px 0 30px 0',
     }}>
       {/* Edge fade effect */}
       <div style={{

@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="bg-dark text-light footer-wrapper">
       <Container className="pt-5 pb-2">
         <Row className="g-4 mb-4">
-          <Col lg={3} md={6} className="mb-3">
+          <Col lg={3} md={6} className="mb-3 d-flex">
             <div className="iso-certification rounded d-flex justify-content-center align-items-center">
               <img
                 src={iso1}
@@ -63,8 +63,6 @@ export default function Footer() {
               <a href="mailto:123@gmail.com" id="cont-a" className="text-secondary">ssultrareadymix@gmail.com</a>
             </div>
           </Col>
-
-          
 
           <Col lg={3} md={6} className="mb-4">
             <h5 className="text-uppercase text-white mb-4">Connect With Us</h5>

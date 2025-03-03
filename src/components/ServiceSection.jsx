@@ -8,9 +8,10 @@ const ServicesSection = () => {
     <>
       <section className="py-5 bg-#FCF5EB">
         <Container>
-          <h3 id="plant-title" className="text-center py-3 mb-2 display-6">
-            Services Offered
-          </h3>
+        <div className="section-header text-center">
+          <h2 className="display-4 fw-bold">Services Offered</h2>
+          <div className="section-underline"></div>
+        </div>
           <ServiceStackCards />
 
           <Row className="g-4 d-flex flex-wrap justify-content-center">

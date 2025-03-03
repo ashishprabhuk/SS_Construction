@@ -7,32 +7,32 @@ export const plants = [
   {
     title: "Batching Plant",
     image: img2,
-    make: "Tata",
-    capacity: "1hr",
+    make: "AJAX",
+    capacity: "45cum/hr",
     availability: 1,
     features: ["High efficiency", "Compact design", "Low maintenance"]
   },
   {
     title: "Transit Mixer",
     image: img3,
-    make: "Tata",
-    capacity: "1hr",
-    availability: 1,
+    make: "Leyland",
+    capacity: "8cum",
+    availability: 2,
     features: ["Durable build", "High load capacity", "Fuel efficient"]
   },
   {
     title: "BOOM PUMP",
     image: img1,
-    make: "Tata",
-    capacity: "1hr",
+    make: "SCWING",
+    capacity: "BP 350D",
     availability: 1,
     features: ["Precision control", "Fast operation", "Easy maneuverability"]
   },
   {
     title: "Putzmeister",
     image: img4,
-    make: "Tata",
-    capacity: "1hr",
+    make: "Putz",
+    capacity: "1400",
     availability: 1,
     features: ["Reliable performance", "Long-lasting components", "Efficient pumping"]
   },
