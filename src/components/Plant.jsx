@@ -1,4 +1,5 @@
 import { Container, Row, Col, Card, ListGroup, Image } from "react-bootstrap";
+import { FiCheckCircle } from "react-icons/fi";
 import { plants } from "../Models/Plant";
 import "./Plant.css";
 
@@ -33,24 +34,21 @@ const Plant = () => {
                   </div>
 
                   <Card.Body className="p-4">
-                    <div className="d-flex align-items-center mb-3 icon-container">
-                      <div>
-                        <p className="mb-0 text-muted features-label ">
-                          Key Features
-                        </p>
-                      </div>
-                    </div>
+                    <p className="mb-2 text-muted"><strong>Make:</strong> {plant.make}</p>
+                    <p className="mb-2 text-muted"><strong>Capacity:</strong> {plant.capacity}</p>
+                    <p className="mb-3 text-muted"><strong>Availability:</strong> {plant.availability}</p>
 
+                    <p className="text-muted features-label">Key Features</p>
                     <ListGroup variant="flush" className="border-top">
-                      {/* {plant.advantages.map((advantage, idx) => (
+                      {plant.features?.map((feature, idx) => (
                         <ListGroup.Item
                           key={idx}
                           className="border-0 px-0 py-2 d-flex align-items-start list-item"
                         >
                           <FiCheckCircle className="text-success me-2 mt-1 flex-shrink-0 list-icon" />
-                          <span className="text-secondary">{advantage}</span>
+                          <span className="text-secondary">{feature}</span>
                         </ListGroup.Item>
-                      ))} */}
+                      ))}
                     </ListGroup>
                   </Card.Body>
                 </Card>
@@ -61,7 +59,7 @@ const Plant = () => {
 
         <style>{`
         .plant-card {
-          transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition: all 0.3s ease-in-out;
           border-radius: 1rem;
           overflow: hidden;
         }
@@ -77,8 +75,7 @@ const Plant = () => {
         }
 
         .plant-image {
-          transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          transform-origin: center center;
+          transition: all 0.4s ease-in-out;
         }
 
         .plant-card:hover .plant-image {
@@ -86,45 +83,30 @@ const Plant = () => {
         }
 
         .title-overlay {
-          transition: all 0.3s ease;
           background: linear-gradient(transparent, rgba(0,0,0,0.8));
           opacity: 1;
         }
 
-        .icon-wrapper {
-          transition: all 0.3s ease;
-        }
-
-        .plant-card:hover .icon-wrapper {
-          transform: rotate(360deg);
-          background: #2d5d8c !important;
-        }
-
         .features-label {
-          transition: all 0.3s ease;
-        }
-
-        .plant-card:hover .features-label {
-          transform: translateX(5px);
-          color: #2d5d8c !important;
+          font-weight: bold;
+          color: #555;
         }
 
         .list-item {
-          transition: all 0.3s ease;
-          }
+          transition: all 0.3s ease-in-out;
+        }
 
-          .plant-card:hover .list-item {
+        .plant-card:hover .list-item {
           transform: translateX(8px);
         }
 
         .list-icon {
-          transition: all 0.3s ease;
-          }
-          
-          .plant-card:hover .list-icon {
+          transition: all 0.3s ease-in-out;
+        }
+        .plant-card:hover .list-icon {
           transform: scale(1.2);
-          }
-          `}</style>
+        }
+        `}</style>
       </section>
     </>
   );

@@ -151,6 +151,9 @@ const ImageSlider = ({ images = [] }) => {
 
   return (
     <div className="image-slider">
+      {/* Transparent Black Overlay */}
+      <div className="image-slider-overlay"></div>
+  
       <div className="image-slider-track" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {images.map((image, index) => (
           <div 
@@ -160,17 +163,16 @@ const ImageSlider = ({ images = [] }) => {
           />
         ))}
       </div>
-
+  
       <div className="image-slider-text-overlay">
-        {/* <TextFlip words={["quality", "service", "safety"]} interval={3000} /> */}
         <TypingAnimation />
       </div>
-
+  
       {/* Progress Bar */}
       <div className="image-slider-progress">
         <div className="image-slider-progress-bar" style={{ width: `${progress}%` }} />
       </div>
-
+  
       {/* Pagination Dots */}
       {images.length > 1 && (
         <div className="image-slider-pagination">
@@ -185,7 +187,7 @@ const ImageSlider = ({ images = [] }) => {
         </div>
       )}
     </div>
-  );
+  );  
 };
 
 export default ImageSlider;

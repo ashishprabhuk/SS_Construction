@@ -1,261 +1,15 @@
-// import "./RequestQuoteForm.css";
-// import { useState } from 'react';
-
-// const RequestQuoteForm = () => {
-//   const [isSubmitting, setIsSubmitting] = useState(false);
-//   const [formStatus, setFormStatus] = useState(null);
-//   const [errorMessage, setErrorMessage] = useState('');
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault(); // Prevent default to handle submission manually
-//     setIsSubmitting(true);
-//     setFormStatus(null);
-
-//     const formData = new FormData(e.target);
-//     const formDataObject = Object.fromEntries(formData.entries());
-
-//     try {
-//       const response = await fetch("https://formsubmit.co/el/bijimi", {
-//         method: "POST",
-//         headers: {
-//           'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify(formDataObject)
-//       });
-      
-//       if (!response.ok) {
-//         throw new Error('Server responded with an error');
-//       }
-      
-//       setFormStatus('success');
-//     } catch (error) {
-//       setErrorMessage('There was an error submitting the form. Please try again.');
-//       setFormStatus('error');
-//     } finally {
-//       setIsSubmitting(false);
-//     }
-//   };
-
-//   if (formStatus === 'success') {
-//     return (
-//       <div className="quote-container my-5 p-4 bg-white rounded shadow text-center">
-//         <h2 style={{ color: "#25D366" }}>Thank you for your submission!</h2>
-//         <p>We've received your quote request and will get back to you shortly.</p>
-//         <p>Note: If this is your first submission, please check your email to confirm your FormSubmit account.</p>
-//         <button 
-//           onClick={() => setFormStatus(null)} 
-//           className="mt-3"
-//           style={{ backgroundColor: "#25D366", borderColor: "#25D366", color: "white", padding: "8px 16px", border: "none", borderRadius: "4px", cursor: "pointer" }}
-//         >
-//           Submit Another Request
-//         </button>
-//       </div>
-//     );
-//   }
-
-//   return (
-//     <div className="quote-container my-5 p-4 bg-white rounded shadow">
-//       <h1 className="text-center mb-4" style={{ color: "#25D366" }}>Request a Concrete Quote</h1>
-      
-//       {formStatus === 'error' && (
-//         <div style={{ 
-//           backgroundColor: "#f8d7da", 
-//           color: "#721c24", 
-//           padding: "12px", 
-//           borderRadius: "4px", 
-//           marginBottom: "20px" 
-//         }}>
-//           {errorMessage}
-//         </div>
-//       )}
-      
-//       <form onSubmit={handleSubmit}>
-//         {/* Hidden field for subject */}
-//         <input type="hidden" name="_subject" value="New Concrete Quote Request" />
-
-//         {/* Contact Details Section */}
-//         <section className="mb-4">
-//           <h2 className="section-title mb-3">Contact Information</h2>
-//           <div style={{ display: "flex", flexWrap: "wrap", margin: "0 -10px" }}>
-//             <div style={{ flex: "0 0 50%", padding: "0 10px", marginBottom: "15px" }}>
-//               <div>
-//                 <label htmlFor="formFullName" className="required">Full Name</label>
-//                 <input 
-//                   type="text" 
-//                   id="formFullName" 
-//                   name="name" 
-//                   required 
-//                   style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-//                 />
-//               </div>
-//             </div>
-//             <div style={{ flex: "0 0 50%", padding: "0 10px", marginBottom: "15px" }}>
-//               <div>
-//                 <label htmlFor="formCompanyName">Company Name</label>
-//                 <input 
-//                   type="text" 
-//                   id="formCompanyName" 
-//                   name="company"
-//                   style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-//                 />
-//               </div>
-//             </div>
-//           </div>
-//           <div style={{ display: "flex", flexWrap: "wrap", margin: "0 -10px" }}>
-//             <div style={{ flex: "0 0 50%", padding: "0 10px", marginBottom: "15px" }}>
-//               <div>
-//                 <label htmlFor="formEmail" className="required">Email</label>
-//                 <input 
-//                   type="email" 
-//                   id="formEmail" 
-//                   name="email" 
-//                   required 
-//                   style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-//                 />
-//               </div>
-//             </div>
-//             <div style={{ flex: "0 0 50%", padding: "0 10px", marginBottom: "15px" }}>
-//               <div>
-//                 <label htmlFor="formPhone" className="required">Phone Number</label>
-//                 <input 
-//                   type="tel" 
-//                   id="formPhone" 
-//                   name="phone" 
-//                   required 
-//                   style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-//                 />
-//               </div>
-//             </div>
-//           </div>
-//         </section>
-
-//         {/* Concrete Specifications */}
-//         <section className="mb-4">
-//           <h2 className="section-title mb-3">Concrete Specifications</h2>
-//           <div style={{ display: "flex", flexWrap: "wrap", margin: "0 -10px" }}>
-//             <div style={{ flex: "0 0 50%", padding: "0 10px", marginBottom: "15px" }}>
-//               <div>
-//                 <label htmlFor="formConcreteType" className="required">Concrete Type</label>
-//                 <select 
-//                   id="formConcreteType" 
-//                   name="concreteType" 
-//                   required
-//                   style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-//                 >
-//                   <option value="">Select Mix Type</option>
-//                   <option>Ready-Mix Concrete</option>
-//                   <option>Precast Concrete</option>
-//                   <option>High-Strength Concrete</option>
-//                 </select>
-//               </div>
-//             </div>
-//             <div style={{ flex: "0 0 50%", padding: "0 10px", marginBottom: "15px" }}>
-//               <div>
-//                 <label htmlFor="formGrade" className="required">Grade/Strength</label>
-//                 <input 
-//                   type="text" 
-//                   id="formGrade" 
-//                   name="grade" 
-//                   required 
-//                   style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-//                 />
-//               </div>
-//             </div>
-//           </div>
-//           <div style={{ marginBottom: "15px" }}>
-//             <label htmlFor="formQuantity" className="required">Quantity Needed (cubic meters)</label>
-//             <input 
-//               type="number" 
-//               step="0.1" 
-//               id="formQuantity" 
-//               name="quantity" 
-//               required 
-//               style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-//             />
-//           </div>
-//         </section>
-
-//         {/* Delivery Information */}
-//         <section className="mb-4">
-//           <h2 className="section-title mb-3">Delivery Details</h2>
-//           <div style={{ display: "flex", flexWrap: "wrap", margin: "0 -10px" }}>
-//             <div style={{ flex: "0 0 50%", padding: "0 10px", marginBottom: "15px" }}>
-//               <div>
-//                 <label htmlFor="formDate" className="required">Preferred Date</label>
-//                 <input 
-//                   type="date" 
-//                   id="formDate" 
-//                   name="preferredDate" 
-//                   required 
-//                   style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-//                 />
-//               </div>
-//             </div>
-//             <div style={{ flex: "0 0 50%", padding: "0 10px", marginBottom: "15px" }}>
-//               <div>
-//                 <label htmlFor="formTime">Preferred Time</label>
-//                 <input 
-//                   type="time" 
-//                   id="formTime" 
-//                   name="preferredTime" 
-//                   style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-//                 />
-//               </div>
-//             </div>
-//           </div>
-//           <div style={{ marginBottom: "15px" }}>
-//             <label htmlFor="formAddress" className="required">Delivery Address</label>
-//             <textarea 
-//               id="formAddress" 
-//               name="address" 
-//               rows="3" 
-//               required 
-//               style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-//             ></textarea>
-//           </div>
-//         </section>
-
-//         {/* Additional Requirements */}
-//         <section className="mb-4">
-//           <h2 className="section-title mb-3">Additional Information</h2>
-//           <div>
-//             <textarea 
-//               id="formComments" 
-//               name="comments" 
-//               rows="5" 
-//               placeholder="Any special requirements or comments..." 
-//               style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-//             ></textarea>
-//           </div>
-//         </section>
-
-//         <div style={{ textAlign: "center" }}>
-//           <button 
-//             type="submit" 
-//             disabled={isSubmitting}
-//             style={{ 
-//               backgroundColor: "#25D366", 
-//               borderColor: "#25D366", 
-//               color: "white", 
-//               padding: "10px 20px", 
-//               border: "none", 
-//               borderRadius: "4px", 
-//               cursor: isSubmitting ? "not-allowed" : "pointer",
-//               opacity: isSubmitting ? 0.7 : 1
-//             }}
-//           >
-//             {isSubmitting ? 'Submitting...' : 'Submit Quote Request'}
-//           </button>
-//         </div>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default RequestQuoteForm;
-
-import "./RequestQuoteForm.css";
 import { useState } from 'react';
+import { 
+  Container, 
+  Row, 
+  Col, 
+  Form, 
+  Button, 
+  Card, 
+  Alert
+} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './RequestQuoteForm.css';
 
 const RequestQuoteForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -263,7 +17,7 @@ const RequestQuoteForm = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent default to handle submission manually
+    e.preventDefault();
     setIsSubmitting(true);
     setFormStatus(null);
 
@@ -294,217 +48,223 @@ const RequestQuoteForm = () => {
 
   if (formStatus === 'success') {
     return (
-      <div className="quote-container my-5 p-4 bg-white rounded shadow text-center">
-        <h2 style={{ color: "#25D366" }}>Thank you for your submission!</h2>
-        <p>We've received your quote request and will get back to you shortly.</p>
-        <p>Note: If this is your first submission, please check your email to confirm your FormSubmit account.</p>
-        <button 
-          onClick={() => setFormStatus(null)} 
-          className="mt-3"
-          style={{ backgroundColor: "#25D366", borderColor: "#25D366", color: "white", padding: "8px 16px", border: "none", borderRadius: "4px", cursor: "pointer" }}
-        >
-          Submit Another Request
-        </button>
-      </div>
+      <Container className="py-5">
+        <Card className="shadow border-0">
+          <Card.Body className="text-center p-5">
+            <h2 className="text-success mb-4">Thank you for your submission!</h2>
+            <p className="lead">We've received your quote request and will get back to you shortly.</p>
+            <p className="text-muted">Note: If this is your first submission, please check your email to confirm your FormSubmit account.</p>
+            <Button 
+              variant="success" 
+              className="mt-4 px-4 py-2"
+              onClick={() => setFormStatus(null)}
+            >
+              Submit Another Request
+            </Button>
+          </Card.Body>
+        </Card>
+      </Container>
     );
   }
 
   return (
-    <div className="quote-container my-5 p-4 bg-white rounded shadow">
-      <h1 className="text-center mb-4" style={{ color: "#25D366" }}>Request a Concrete Quote</h1>
-      
-      {formStatus === 'error' && (
-        <div style={{ 
-          backgroundColor: "#f8d7da", 
-          color: "#721c24", 
-          padding: "12px", 
-          borderRadius: "4px", 
-          marginBottom: "20px" 
-        }}>
-          {errorMessage}
-        </div>
-      )}
-      
-      <form onSubmit={handleSubmit}>
-        {/* Hidden field for subject */}
-        <input type="hidden" name="_subject" value="New Concrete Quote Request" />
+    <Container className="py-5">
+      <Card >
+        <Card.Body className="p-md-5 p-4">
+          <h1 className="text-center mb-4 text-success">Request a Concrete Quote</h1>
+          
+          {formStatus === 'error' && (
+            <Alert variant="danger" className="mb-4">
+              {errorMessage}
+            </Alert>
+          )}
+          
+          <Form onSubmit={handleSubmit}>
+            {/* Hidden field for subject */}
+            <input type="hidden" name="_subject" value="New Concrete Quote Request" />
 
-        {/* Contact Details Section */}
-        <section className="mb-4">
-          <h2 className="section-title mb-3">Contact Information</h2>
-          <div style={{ display: "flex", flexWrap: "wrap", margin: "0 -10px" }}>
-            <div style={{ flex: "0 0 50%", padding: "0 10px", marginBottom: "15px" }}>
-              <div>
-                <label htmlFor="formFullName" className="required">Full Name</label>
-                <input 
-                  type="text" 
-                  id="formFullName" 
-                  name="name" 
-                  required 
-                  style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-                />
-              </div>
-            </div>
-            <div style={{ flex: "0 0 50%", padding: "0 10px", marginBottom: "15px" }}>
-              <div>
-                <label htmlFor="formCompanyName">Company Name</label>
-                <input 
-                  type="text" 
-                  id="formCompanyName" 
-                  name="company"
-                  style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-                />
-              </div>
-            </div>
-          </div>
-          <div style={{ display: "flex", flexWrap: "wrap", margin: "0 -10px" }}>
-            <div style={{ flex: "0 0 50%", padding: "0 10px", marginBottom: "15px" }}>
-              <div>
-                <label htmlFor="formEmail" className="required">Email</label>
-                <input 
-                  type="email" 
-                  id="formEmail" 
-                  name="email" 
-                  required 
-                  style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-                />
-              </div>
-            </div>
-            <div style={{ flex: "0 0 50%", padding: "0 10px", marginBottom: "15px" }}>
-              <div>
-                <label htmlFor="formPhone" className="required">Phone Number</label>
-                <input 
-                  type="tel" 
-                  id="formPhone" 
-                  name="phone" 
-                  required 
-                  style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+            {/* Contact Details Section */}
+            <Card className="mb-4 border-0 bg-light">
+              <Card.Body className="p-4">
+                <h4 className="mb-4 border-bottom pb-2">Contact Information</h4>
+                <Row>
+                  <Col md={6} className="mb-3">
+                    <Form.Group controlId="formFullName">
+                      <Form.Label className="fw-bold">Full Name <span className="text-danger">*</span></Form.Label>
+                      <Form.Control 
+                        type="text" 
+                        name="name" 
+                        required 
+                        className="shadow-sm"
+                      />
+                    </Form.Group>
+                  </Col>
+                  <Col md={6} className="mb-3">
+                    <Form.Group controlId="formCompanyName">
+                      <Form.Label className="fw-bold">Company Name</Form.Label>
+                      <Form.Control 
+                        type="text" 
+                        name="company"
+                        className="shadow-sm"
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col md={6} className="mb-3">
+                    <Form.Group controlId="formEmail">
+                      <Form.Label className="fw-bold">Email <span className="text-danger">*</span></Form.Label>
+                      <Form.Control 
+                        type="email" 
+                        name="email" 
+                        required 
+                        className="shadow-sm"
+                      />
+                    </Form.Group>
+                  </Col>
+                  <Col md={6} className="mb-3">
+                    <Form.Group controlId="formPhone">
+                      <Form.Label className="fw-bold">Phone Number <span className="text-danger">*</span></Form.Label>
+                      <Form.Control 
+                        type="tel" 
+                        name="phone" 
+                        required 
+                        className="shadow-sm"
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
 
-        {/* Concrete Specifications */}
-        <section className="mb-4">
-          <h2 className="section-title mb-3">Concrete Specifications</h2>
-          <div style={{ display: "flex", flexWrap: "wrap", margin: "0 -10px" }}>
-            <div style={{ flex: "0 0 50%", padding: "0 10px", marginBottom: "15px" }}>
-              <div>
-                <label htmlFor="formConcreteType" className="required">Concrete Type</label>
-                <select 
-                  id="formConcreteType" 
-                  name="concreteType" 
-                  required
-                  style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-                >
-                  <option value="">Select Mix Type</option>
-                  <option>Ready-Mix Concrete</option>
-                  <option>Precast Concrete</option>
-                  <option>High-Strength Concrete</option>
-                </select>
-              </div>
-            </div>
-            <div style={{ flex: "0 0 50%", padding: "0 10px", marginBottom: "15px" }}>
-              <div>
-                <label htmlFor="formGrade" className="required">Grade/Strength</label>
-                <input 
-                  type="text" 
-                  id="formGrade" 
-                  name="grade" 
-                  required 
-                  style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-                />
-              </div>
-            </div>
-          </div>
-          <div style={{ marginBottom: "15px" }}>
-            <label htmlFor="formQuantity" className="required">Quantity Needed (cubic meters)</label>
-            <input 
-              type="number" 
-              step="0.1" 
-              id="formQuantity" 
-              name="quantity" 
-              required 
-              style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-            />
-          </div>
-        </section>
+            {/* Concrete Specifications */}
+            <Card className="mb-4 border-0 bg-light">
+              <Card.Body className="p-4">
+                <h4 className="mb-4 border-bottom pb-2">Concrete Specifications</h4>
+                <Row>
+                  <Col md={6} className="mb-3">
+                    <Form.Group controlId="formConcreteType">
+                      <Form.Label className="fw-bold">Concrete Type <span className="text-danger">*</span></Form.Label>
+                      <Form.Select 
+                        name="concreteType" 
+                        required
+                        className="shadow-sm"
+                      >
+                        <option value="">Select Mix Type</option>
+                        <option>Ready-Mix Concrete</option>
+                        <option>Precast Concrete</option>
+                        <option>High-Strength Concrete</option>
+                      </Form.Select>
+                    </Form.Group>
+                  </Col>
+                  <Col md={6} className="mb-3">
+                    <Form.Group controlId="formGrade">
+                      <Form.Label className="fw-bold">Grade/Strength <span className="text-danger">*</span></Form.Label>
+                      <Form.Control 
+                        type="text" 
+                        name="grade" 
+                        required 
+                        className="shadow-sm"
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col className="mb-3">
+                    <Form.Group controlId="formQuantity">
+                      <Form.Label className="fw-bold">Quantity Needed (cubic meters) <span className="text-danger">*</span></Form.Label>
+                      <Form.Control 
+                        type="number" 
+                        step="0.1" 
+                        name="quantity" 
+                        required 
+                        className="shadow-sm"
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
 
-        {/* Delivery Information */}
-        <section className="mb-4">
-          <h2 className="section-title mb-3">Delivery Details</h2>
-          <div style={{ display: "flex", flexWrap: "wrap", margin: "0 -10px" }}>
-            <div style={{ flex: "0 0 50%", padding: "0 10px", marginBottom: "15px" }}>
-              <div>
-                <label htmlFor="formDate" className="required">Preferred Date</label>
-                <input 
-                  type="date" 
-                  id="formDate" 
-                  name="preferredDate" 
-                  required 
-                  style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-                />
-              </div>
-            </div>
-            <div style={{ flex: "0 0 50%", padding: "0 10px", marginBottom: "15px" }}>
-              <div>
-                <label htmlFor="formTime">Preferred Time</label>
-                <input 
-                  type="time" 
-                  id="formTime" 
-                  name="preferredTime" 
-                  style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-                />
-              </div>
-            </div>
-          </div>
-          <div style={{ marginBottom: "15px" }}>
-            <label htmlFor="formAddress" className="required">Delivery Address</label>
-            <textarea 
-              id="formAddress" 
-              name="address" 
-              rows="3" 
-              required 
-              style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-            ></textarea>
-          </div>
-        </section>
+            {/* Delivery Information */}
+            <Card className="mb-4 border-0 bg-light">
+              <Card.Body className="p-4">
+                <h4 className="mb-4 border-bottom pb-2">Delivery Details</h4>
+                <Row>
+                  <Col md={6} className="mb-3">
+                    <Form.Group controlId="formDate">
+                      <Form.Label className="fw-bold">Preferred Date <span className="text-danger">*</span></Form.Label>
+                      <Form.Control 
+                        type="date" 
+                        name="preferredDate" 
+                        required 
+                        className="shadow-sm"
+                      />
+                    </Form.Group>
+                  </Col>
+                  <Col md={6} className="mb-3">
+                    <Form.Group controlId="formTime">
+                      <Form.Label className="fw-bold">Preferred Time</Form.Label>
+                      <Form.Control 
+                        type="time" 
+                        name="preferredTime" 
+                        className="shadow-sm"
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col className="mb-3">
+                    <Form.Group controlId="formAddress">
+                      <Form.Label className="fw-bold">Delivery Address <span className="text-danger">*</span></Form.Label>
+                      <Form.Control 
+                        as="textarea" 
+                        rows={3} 
+                        name="address" 
+                        required 
+                        className="shadow-sm"
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
 
-        {/* Additional Requirements */}
-        <section className="mb-4">
-          <h2 className="section-title mb-3">Additional Information</h2>
-          <div>
-            <textarea 
-              id="formComments" 
-              name="comments" 
-              rows="5" 
-              placeholder="Any special requirements or comments..." 
-              style={{ display: "block", width: "100%", padding: "8px", marginTop: "5px", border: "1px solid #ced4da", borderRadius: "4px" }} 
-            ></textarea>
-          </div>
-        </section>
+            {/* Additional Requirements */}
+            <Card className="mb-4 border-0 bg-light">
+              <Card.Body className="p-4">
+                <h4 className="mb-4 border-bottom pb-2">Additional Information</h4>
+                <Row>
+                  <Col>
+                    <Form.Group controlId="formComments">
+                      <Form.Control 
+                        as="textarea" 
+                        rows={5} 
+                        name="comments" 
+                        placeholder="Any special requirements or comments..." 
+                        className="shadow-sm"
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
 
-        <div style={{ textAlign: "center" }}>
-          <button 
-            type="submit" 
-            disabled={isSubmitting}
-            style={{ 
-              backgroundColor: "#25D366", 
-              borderColor: "#25D366", 
-              color: "white", 
-              padding: "10px 20px", 
-              border: "none", 
-              borderRadius: "4px", 
-              cursor: isSubmitting ? "not-allowed" : "pointer",
-              opacity: isSubmitting ? 0.7 : 1
-            }}
-          >
-            {isSubmitting ? 'Submitting...' : 'Submit Quote Request'}
-          </button>
-        </div>
-      </form>
-    </div>
+            <div className="text-center mt-4">
+              <Button 
+                variant="success" 
+                type="submit" 
+                size="lg"
+                className="px-5 py-3"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Submitting...' : 'Submit Quote Request'}
+              </Button>
+            </div>
+          </Form>
+        </Card.Body>
+      </Card>
+    </Container>
   );
 };
 

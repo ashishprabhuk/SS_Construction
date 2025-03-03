@@ -37,9 +37,9 @@ const TypingAnimation = () => {
   }, [text, isDeleting, wordIndex]);
 
   return (
-    <h1 className="text-2xl font-bold">
+    <h1 className="text-4xl display-2 text-white text-uppercase fw-bolder font-bold">
       {text}
-      <span className="animate-blink">|</span>
+      <span className="animate-blink mb-2 justify-content-start text-white">|</span>
     </h1>
   );
 };
