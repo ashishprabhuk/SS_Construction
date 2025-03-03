@@ -31,17 +31,15 @@ const services = [
 const ServiceStackCards = () => {
   return (
     <Container className="pt-2 pb-4">
-      <Row className="g-4 flex-nowrap overflow-auto pb-4">
+      <Row className="g-4 d-flex flex-wrap justify-content-center">
         {services.map((service, index) => (
-          <Col key={index} xs={12} md={6} lg={3} className="d-flex">
+          <Col key={index} xs={12} sm={6} md={6} lg={3} className="d-flex">
             <Card 
               className="h-100 shadow-md border-2 rounded-4 service-card"
               style={{ minWidth: '250px' }}
             >
               <Card.Body className="text-center p-4 d-flex flex-column">
-                <div className="icon-wrapper mb-3 mx-auto">
-                  <img src={service.image} alt={service.title} />
-                </div>
+                  <img className='mb-3 mx-auto' src={service.image} alt={service.title} />
                 <Card.Title className="fw-bold mb-3">{service.title}</Card.Title>
                 <Card.Text className="text-secondary">
                   {service.content}

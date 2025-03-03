@@ -11,6 +11,7 @@ import Footer from './components/Footer'
 import ScrollToTopButton from './components/ScrollToTopButton'
 import { useEffect, useState } from 'react'
 import QuickEnquiryModal from './components/QuickEnquiryModal'
+import ScrollToTop from './components/ScrollToTop'
 
 export default function App() {
 
@@ -31,6 +32,7 @@ export default function App() {
 
   return (
     <>
+      <ScrollToTop/>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

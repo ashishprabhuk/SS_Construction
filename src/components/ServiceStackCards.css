@@ -1,9 +1,9 @@
+.service-card {
+  transition: none !important;
+  animation: none !important;
+}
 
-.icon-wrapper {
-      transition: none;
-  }
-
-  .service-card:hover .icon-wrapper {
-    transform: none;
-    background: transparent;
+.icon-wrapper img {
+  transition: none !important;
+  animation: none !important;
 }

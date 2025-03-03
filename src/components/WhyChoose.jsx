@@ -16,10 +16,9 @@ function WhyChoose() {
                 <div className="mb-3 text-primary">
                   <i className="bi bi-lightning-charge fs-1"></i>
                 </div>
-                <Card.Title>Title 1</Card.Title>
+                <Card.Title>On-Time Delivery</Card.Title>
                 <Card.Text>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
+                  We understand that time is critical in construction. Our efficient logistics ensure your concrete is delivered exactly when you need it.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -31,10 +30,9 @@ function WhyChoose() {
                 <div className="mb-3 text-primary">
                   <i className="bi bi-shield-check fs-1"></i>
                 </div>
-                <Card.Title>Title 2</Card.Title>
+                <Card.Title>Uncompromising Quality</Card.Title>
                 <Card.Text>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
+                  We blend top-grade materials with advanced mixing techniques to deliver concrete that meets the highest industry standards.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -46,10 +44,9 @@ function WhyChoose() {
                 <div className="mb-3 text-primary">
                   <i className="bi bi-graph-up fs-1"></i>
                 </div>
-                <Card.Title>Title 3</Card.Title>
+                <Card.Title>Cost-Effective Excellence</Card.Title>
                 <Card.Text>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
+                We offer exceptional value with competitive pricing, proving that quality doesn&apos;t have to come at a premium.
                 </Card.Text>
               </Card.Body>
             </Card>

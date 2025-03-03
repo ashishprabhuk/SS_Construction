@@ -8,15 +8,15 @@ const ServicesSection = () => {
     <>
       <section className="py-5 bg-#FCF5EB">
         <Container>
-        <h3 id="plant-title" className="text-center py-3 mb-2 display-6">
+          <h3 id="plant-title" className="text-center py-3 mb-2 display-6">
             Services Offered
           </h3>
-        <ServiceStackCards />
+          <ServiceStackCards />
 
-          <Row className="g-4">
+          <Row className="g-4 d-flex flex-wrap justify-content-center">
             {services.map((service, index) => (
-              <Col key={index} md={6} lg={4}>
-                <Card className="h-100 shadow-sm border-0 overflow-hidden service-card">
+              <Col key={index} xs={12} sm={6} md={6} lg={4} className="d-flex">
+                <Card className="h-100 shadow-sm border-0 overflow-hidden service-card w-100">
                   {/* Image Section */}
                   <div className="position-relative image-container">
                     <Image
@@ -36,7 +36,7 @@ const ServicesSection = () => {
                   <Card.Body className="p-4">
                     <div className="d-flex align-items-center mb-3 icon-container">
                       <div>
-                        <p className="mb-0 text-muted features-label ">
+                        <p className="mb-0 text-muted features-label">
                           Key Features
                         </p>
                       </div>
@@ -65,6 +65,8 @@ const ServicesSection = () => {
           transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           border-radius: 1rem;
           overflow: hidden;
+          display: flex;
+          flex-direction: column;
         }
 
         .service-card:hover {
@@ -93,12 +95,11 @@ const ServicesSection = () => {
         }
 
         .icon-wrapper {
-          transition: all 0.3s ease;
+          transition: none;
         }
 
         .service-card:hover .icon-wrapper {
-          transform: rotate(360deg);
-          background: #2d5d8c !important;
+          transform: none;
         }
 
         .features-label {

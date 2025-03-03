@@ -43,7 +43,7 @@ const AboutSection = () => {
             </Col>
             <Col md={6} className="text-center">
               <img
-              style={{ borderRadius: "20px" }}
+                style={{ borderRadius: "20px" }}
                 src={companyImage}
                 alt="Company Overview"
                 className="img-fluid"
@@ -152,7 +152,8 @@ const AboutSection = () => {
               <ul className="lab-features list-unstyled text-start">
                 <li className="d-flex align-items-center">
                   <FiCheckCircle className="text-success me-2 flex-shrink-0" />
-                  Consistent quality products & State-of-the-art in-house testing facility
+                  Consistent quality products & State-of-the-art in-house
+                  testing facility
                 </li>
                 <li className="d-flex align-items-center">
                   <FiCheckCircle className="text-success me-2 flex-shrink-0" />
@@ -179,41 +180,45 @@ const AboutSection = () => {
       {/* Management Section */}
       <section className="management-section py-5 bg-light">
         <Container>
-          <h2 className="text-center mb-5">
-            <FaUsers className="me-2 display-6" /> Leadership Team
+          <h2 className="text-center mb-5 fw-bold text-dark">
+            <FaUsers className="me-2 display-6 text-primary" /> Leadership Team
           </h2>
-          <Row className="g-4 gap-4 justify-content-center">
-            <Col md={6} lg={5}>
-              <Card style={{borderRadius:"20px"}} className="management-card  h-100 text-center">
-                <Card.Img variant="top" src={ceo} style={{borderRadius:"20px 20px 0px 0px"}} />
-                <Card.Body style={{ backgroundColor: "#fcf5eb", borderRadius:"0px 0px 20px 20px" }}>
-                  <Card.Title>Er. S. Sakthivel</Card.Title>
-                  <Card.Subtitle style={{color:"#25D366"}} className=" mb-2">
-                    Managing Director & CFO
-                  </Card.Subtitle>
-                  <Card.Text className="text-secondary pb-2">
-                    M.Tech (Structural Engineering) with 30+ years experience.
-                    Founder of Arutjothi Constructions. <br />
-                    Driving excellence inconcrete production.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={6} lg={5}>
-              <Card style={{borderRadius:"20px"}} className="management-card h-100 text-center">
-                <Card.Img variant="top" src={profile}  style={{borderRadius:"20px 20px 0px 0px"}}/>
-                <Card.Body style={{ backgroundColor: "#fcf5eb", borderRadius:"0px 0px 20px 20px" }}>
-                  <Card.Title>Er. S. Srivarsan</Card.Title>
-                  <Card.Subtitle style={{color:"#25D366"}} className="mb-2">
-                    Chief Executive Officer
-                  </Card.Subtitle>
-                  <Card.Text className="text-secondary pb-2">
-                    B.E. Civil Engineering. Technology-driven <br /> 
-                    leader focused on sustainable construction and operational excellence.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
+          <Row className="g-4 justify-content-center">
+            {[
+              {
+                name: "Er. S. Sakthivel",
+                role: "Managing Director & CFO",
+                description:
+                  "M.Tech (Structural Engineering) with 30+ years of experience. Founder of Arutjothi Constructions. Driving excellence in concrete production.",
+                image: ceo,
+              },
+              {
+                name: "Er. S. Srivarsan",
+                role: "Chief Executive Officer",
+                description:
+                  "B.E. Civil Engineering. Technology-driven leader focused on sustainable construction and operational excellence.",
+                image: profile,
+              },
+            ].map((leader, index) => (
+              <Col key={index} xs={12} sm={10} md={6} lg={5}>
+                <Card className="management-card shadow-lg h-100 text-center">
+                  <Card.Img
+                    variant="top"
+                    src={leader.image}
+                    className="leader-img"
+                  />
+                  <Card.Body className="leader-body">
+                    <Card.Title className="fw-bold">{leader.name}</Card.Title>
+                    <Card.Subtitle className="leader-role mb-3">
+                      {leader.role}
+                    </Card.Subtitle>
+                    <Card.Text className="text-secondary">
+                      {leader.description}
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
           </Row>
         </Container>
       </section>
