@@ -14,19 +14,15 @@ export default function Home() {
         <ImageSlider images={sliderImages} />
       </section>
 
-
-        <WhyChoose/>
-      
+      <WhyChoose />
 
       <section>
         <Plant />
       </section>
 
       <section className="roller py-3">
-        <h3 id="plant-title" className="text-center mb-3 display-6">
-            Our Esteemed Associates
-          </h3>
-          <div className="section-underline"></div>
+        <h1 className="display-6 text-center fw-bold my-3">Our Esteemed Associates</h1>
+        <div className="section-underline"></div>
         <ImageRoller images={images} slideDuration={20} imageWidth={150} />
       </section>
     </div>

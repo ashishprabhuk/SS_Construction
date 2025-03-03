@@ -63,7 +63,8 @@ const AboutSection = () => {
                 style={{ borderRadius: "20px" }}
               >
                 <Card.Body>
-                  <FaEye className="display-4 text-primary mb-3" />
+                  {/* <FaEye className="display-4 text-success mb-3" /> */}
+                  
                   <h3
                     className="pb-3"
                     style={{
@@ -92,7 +93,7 @@ const AboutSection = () => {
                 style={{ borderRadius: "20px" }}
               >
                 <Card.Body>
-                  <FaBullseye className="display-4 text-success mb-3" />
+                  <FaBullseye className="display-4 text-danger mb-3" />
                   <h3
                     className="pb-3"
                     style={{

@@ -60,7 +60,7 @@ export default function Footer() {
             <h5 className="text-uppercase text-white mb-4">Send Us A Message</h5>
             <div className="text-secondary">
               <i className="bi bi-envelope me-2" style={{ color: "#fff" }}></i>
-              <a href="mailto:123@gmail.com" id="cont-a" className="text-secondary">ssultrareadymix@gmail.com</a>
+              <a href="mailto:ssultrareadymix@gmail.com" id="cont-a" className="text-secondary">ssultrareadymix@gmail.com</a>
             </div>
           </Col>
 

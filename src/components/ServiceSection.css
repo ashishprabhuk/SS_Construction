@@ -3,3 +3,8 @@
     border-color: #25D366;
     /* border-color: #ededed93; */
 }
+
+#service-section {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 5rem 0 2rem 0;
+  }

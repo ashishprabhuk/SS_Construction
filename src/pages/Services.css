@@ -1,3 +1,4 @@
 .service-page {
-  background-color: #FCF5EB;
+  /* background-color: #FCF5EB; */
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
 }

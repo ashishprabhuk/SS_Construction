@@ -8,9 +8,9 @@ const Plant = () => {
     <>
       <section id="plant-bgc" className="py-5">
         <Container>
-          <h3 id="plant-title" className="text-center mb-3 display-6">
-            Plants & Machineries
-          </h3>
+          <h1 className="display-6 text-center fw-bold my-3">
+          Plants & Machineries
+        </h1>
           <div className="section-underline" style={{marginBottom: '10px'}}></div>
 
           <Row className="g-4 mt-3">
