@@ -5,6 +5,7 @@ import { images } from "../Models/RollerImages";
 import ImageRoller from "../components/ImageRoller";
 import Plant from "../components/Plant";
 import WhyChoose from "../components/WhyChoose";
+import ProjectShowcase from "../components/ProjectShowcase";
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
       </section>
 
       <WhyChoose />
+
+      <ProjectShowcase/>
 
       <section>
         <Plant />
