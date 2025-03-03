@@ -188,6 +188,10 @@
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
 }
 
+.btn-outline-light img:hover {
+  filter: brightness(0) invert(1); 
+}
+
 .btn-outline-light:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border-color: #fff;
@@ -237,4 +241,11 @@
 
 .menu-toggle.open .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+}
+
+.scroll-img {
+  transition: filter 0.3s ease;
+}
+.scroll-img:hover {
+  filter: brightness(0) invert(1); 
 }
