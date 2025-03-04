@@ -11,7 +11,7 @@ import temp from '../assets/Services/Temperature Control Concrete.webp';
 
 export const services = [
   {
-    title: 'SSURMC – FIBRE CON',
+    title: 'Fibre Concrete',
     image: fibre, 
     advantages: [
       'Greatly reduces the Shrinkage Cracks',
@@ -21,7 +21,7 @@ export const services = [
     ],
   },
   {
-    title: 'SSURMC – AIR CONCRETE',
+    title: 'Air Concrete',
     image: air,
     advantages: [
       'Suitable for floor level difference filling, wall side filling',
@@ -58,7 +58,7 @@ export const services = [
     ],
   },
   {
-    title: 'SSURMC – AQUAGUARD',
+    title: 'Aquaguard Concrete',
     image: aqua,
     advantages: [
       'Greatly reduces the Water Seepage into concrete',
@@ -67,7 +67,7 @@ export const services = [
     ],
   },
   {
-    title: 'SSURMC – IRON CONCRETE',
+    title: 'Iron Concrete',
     image: iron, 
     advantages: [
       'Suitable for Industrial Flooring',

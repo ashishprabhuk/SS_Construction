@@ -63,7 +63,7 @@ const ContactSection = () => {
                   <FaComments className="form-icon" />
                 </div>
                 <h3 className="form-title h4">Send Us a Message</h3>
-                <p className="text-muted">We'd love to hear from you. Fill out the form below to get in touch.</p>
+                <p className="text-muted">We&apos;d love to hear from you. Fill out the form below to get in touch.</p>
               </div>
 
               <Form noValidate onSubmit={handleSubmit} className="integrated-form">

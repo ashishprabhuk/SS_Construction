@@ -67,13 +67,13 @@ export default function Footer() {
           <Col lg={3} md={6} className="mb-4">
             <h5 className="text-uppercase text-white mb-4">Connect With Us</h5>
             <div className="d-flex flex-wrap gap-3 social-links">
-              <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" id="social-linkss" className="btn btn-outline-light btn-sm rounded-circle">
+              <a href="https://wa.me/7010076370" target="_blank" rel="noopener noreferrer" id="social-linkss" className="btn btn-outline-light btn-sm rounded-circle">
                 <i className="bi bi-whatsapp" style={{ color: "#fff" }}></i>
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" id="social-linkss" className="btn btn-outline-light btn-sm rounded-circle">
+              <a href="https://www.instagram.com/ssultrareadymixconcrete/" target="_blank" rel="noopener noreferrer" id="social-linkss" className="btn btn-outline-light btn-sm rounded-circle">
                 <i className="bi bi-instagram" style={{ color: "#fff" }}></i>
               </a>
-              <a href="mailto:info@example.com" id="social-linkss" className="btn btn-outline-light btn-sm rounded-circle">
+              <a href="mailto:ssultrareadymix@gmail.com" id="social-linkss" className="btn btn-outline-light btn-sm rounded-circle">
                 <i className="bi bi-envelope" style={{ color: "#fff" }}></i>
               </a>
             </div>

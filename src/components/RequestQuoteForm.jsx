@@ -82,7 +82,7 @@ const RequestQuoteForm = () => {
             </Alert>
           )}
           
-          <Form onSubmit={handleSubmit} action="https://formsubmit.co/ashishprabhu2143@gmail.com" method="POST">
+          <Form onSubmit={handleSubmit} action="https://formsubmit.co/ssultrareadymix@gmail.com" method="POST">
             {/* Hidden fields for FormSubmit.co */}
             <input type="hidden" name="_subject" value="New Concrete Quote Request" />
             <input type="hidden" name="_template" value="table" />

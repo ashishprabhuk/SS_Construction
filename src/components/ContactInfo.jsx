@@ -29,7 +29,7 @@ const ContactInfo = () => {
               <address className="mb-0">
                 <strong>SS ULTRA READYMIX CONCRETE</strong>
                 <br />
-                <a href="https://goo.gl/maps/example" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-dark hover-text-primary">
+                <a href="https://maps.app.goo.gl/58z7Tg47F45N1FQX8" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-dark hover-text-primary">
                   41/2A2, Kollidam River Bed,<br />
                   Kondayampettai, Thiruvanaikovil,<br />
                   Trichy - 620005
@@ -45,13 +45,13 @@ const ContactInfo = () => {
               <h3 className="h6 fw-bold mb-3">Contact Numbers</h3>
               <ul className="list-unstyled mb-0">
                 <li className="mb-2">
-                  <a href="tel:9842459234" className="text-decoration-none text-dark hover-text-primary d-block">
-                    98424 59234
+                  <a href="tel:+91 9842459234" className="text-decoration-none text-dark hover-text-primary d-block">
+                  +91 98424 59234
                   </a>
                 </li>
                 <li>
-                  <a href="tel:8870536435" className="text-decoration-none text-dark hover-text-primary d-block">
-                    88705 36435
+                  <a href="tel:+91 8870536435" className="text-decoration-none text-dark hover-text-primary d-block">
+                  +91 88705 36435
                   </a>
                 </li>
               </ul>
@@ -63,8 +63,8 @@ const ContactInfo = () => {
                 <FaEnvelope className="text-primary fs-5" />
               </div>
               <h3 className="h6 fw-bold mb-3">Email Address</h3>
-              <a href="mailto:info@ssultraconcrete.com" className="text-decoration-none text-dark hover-text-primary">
-                info@ssultraconcrete.com
+              <a href="mailto:ssultrareadymix@gmail.com" className="text-decoration-none text-dark hover-text-primary">
+                ssultrareadymix@gmail.com
               </a>
             </Col>
           </Row>

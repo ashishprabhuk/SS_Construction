@@ -1,38 +1,39 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button, Modal, Badge, Nav } from 'react-bootstrap';
-import airport from "../assets/Home/airport.png"; 
+import itd from "../assets/Home/airport.png"; 
+import airport from "../assets/Home/Airport_View_07.jpg";
+import iocl from "../assets/Home/iocl.png";
 import { Link } from 'react-router-dom';
 
 const ProjectShowcase = () => {
-  // Sample project data - replace with your actual projects
   const projects = [
     {
       id: 1,
-      title: "Airport Terminal",
+      title: "Airport Terminal Building",
       description: "A 12-story commercial building with sustainable design features and smart office technology.",
       imageUrl: airport,
       category: "Government",
-      completionDate: "January 2025",
-      highlights: ["ISO Certified", "Advanced Concrete Technique", "Completed on schedule"]
+      completionDate: "2024",
+      highlights: [" Abrasion & Impact Resistance", "⁠Fast Setting & Workability", "High-Strength Concrete"]
     },
     {
       id: 2,
-      title: "Airport Terminal",
+      title: "Indane gas by Indian oil Corporation limited (IOCL)",
       description: "A 12-story commercial building with sustainable design features and smart office technology.",
-      imageUrl: airport,
-      category: "Commercial",
-      completionDate: "January 2025",
-      highlights: ["ISO Certified", "Advanced Concrete Technique", "Completed on schedule"]
+      imageUrl: iocl,
+      category: "Government",
+      completionDate: "Ongoing",
+      highlights: ["Infrastructure Development", "Foundation & Load-bearing Capacity", "Roads & Transportation Facilities"]
     },
     {
       id: 3,
-      title: "Airport Terminal",
+      title: "ITD cementation India ltd in Intl. Airport Terminal ",
       description: "A 12-story commercial building with sustainable design features and smart office technology.",
-      imageUrl: airport,
-      category: "Residential",
-      completionDate: "January 2025",
-      highlights: ["ISO Certified", "Advanced Concrete Technique", "Completed on schedule"]
+      imageUrl: itd,
+      category: "Government",
+      completionDate: "2024",
+      highlights: ["Structural Strength & Load-Bearing Capacity", "Durability & Weather Resistance", "Speed & Efficiency in Construction"]
     },
   ];
 
@@ -153,7 +154,7 @@ const ProjectShowcase = () => {
       {/* Call to Action Section */}
       <Container className="my-5">
         <Card style={{backgroundColor:"#281570"}} text="white" className="shadow">
-          <Card.Body className="py-5">
+          <Card.Body className="py-5 mx-3">
             <Row>
               <Col md={8}>
                 <h2 className="fw-bold">Ready to start your project?</h2>

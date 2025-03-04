@@ -37,19 +37,6 @@ const Plant = () => {
                     <p className="mb-2 text-muted"><strong>Make:</strong> {plant.make}</p>
                     <p className="mb-2 text-muted"><strong>Capacity:</strong> {plant.capacity}</p>
                     <p className="mb-3 text-muted"><strong>Availability:</strong> {plant.availability}</p>
-
-                    <p className="text-muted features-label">Key Features</p>
-                    <ListGroup variant="flush" className="border-top">
-                      {plant.features?.map((feature, idx) => (
-                        <ListGroup.Item
-                          key={idx}
-                          className="border-0 px-0 py-2 d-flex align-items-start list-item"
-                        >
-                          <FiCheckCircle className="text-success me-2 mt-1 flex-shrink-0 list-icon" />
-                          <span className="text-secondary">{feature}</span>
-                        </ListGroup.Item>
-                      ))}
-                    </ListGroup>
                   </Card.Body>
                 </Card>
               </Col>
