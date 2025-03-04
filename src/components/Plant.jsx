@@ -15,7 +15,7 @@ const Plant = () => {
 
           <Row className="g-4 mt-3">
             {plants.map((plant, index) => (
-              <Col key={index} md={6} lg={6}>
+              <Col key={index} md={6} lg={4}>
                 <Card className="h-100 shadow-sm border-0 overflow-hidden plant-card">
                   {/* Image Section */}
                   <div className="position-relative image-container">

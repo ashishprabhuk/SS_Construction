@@ -36,4 +36,20 @@ export const plants = [
     availability: 1,
     features: ["Reliable performance", "Long-lasting components", "Efficient pumping"]
   },
+  {
+    title: "Putzmeister",
+    image: img4,
+    make: "Putz",
+    capacity: "1400",
+    availability: 1,
+    features: ["Reliable performance", "Long-lasting components", "Efficient pumping"]
+  },
+  {
+    title: "Putzmeister",
+    image: img4,
+    make: "Putz",
+    capacity: "1400",
+    availability: 1,
+    features: ["Reliable performance", "Long-lasting components", "Efficient pumping"]
+  },
 ];

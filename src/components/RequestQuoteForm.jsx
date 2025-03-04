@@ -9,7 +9,6 @@ import {
   Alert
 } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './RequestQuoteForm.css';
 
 const RequestQuoteForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -20,26 +19,31 @@ const RequestQuoteForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setFormStatus(null);
+    setErrorMessage('');
 
     const formData = new FormData(e.target);
-    const formDataObject = Object.fromEntries(formData.entries());
+    
+    // Add a timestamp to make each submission unique
+    formData.append('_timestamp', new Date().toISOString());
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/ssultrareadymix@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/ashishprabhu2143@gmail.com", {
         method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          'Accept': 'application/json'
         },
-        body: JSON.stringify(formDataObject)
+        body: formData
       });
       
+      const responseData = await response.json();
+      
       if (!response.ok) {
-        throw new Error('Server responded with an error');
+        throw new Error(responseData.message || 'Submission failed');
       }
       
       setFormStatus('success');
     } catch (error) {
-      setErrorMessage('There was an error submitting the form. Please try again.');
+      setErrorMessage(error.message || 'There was an error submitting the form. Please try again.');
       setFormStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -53,7 +57,6 @@ const RequestQuoteForm = () => {
           <Card.Body className="text-center p-5">
             <h2 className="text-success mb-4">Thank you for your submission!</h2>
             <p className="lead">We've received your quote request and will get back to you shortly.</p>
-            <p className="text-muted">Note: If this is your first submission, please check your email to confirm your FormSubmit account.</p>
             <Button 
               variant="success" 
               className="mt-4 px-4 py-2"
@@ -69,7 +72,7 @@ const RequestQuoteForm = () => {
 
   return (
     <Container className="py-5">
-      <Card >
+      <Card>
         <Card.Body className="p-md-5 p-4">
           <h1 className="text-center mb-4 text-success">Request a Concrete Quote</h1>
           
@@ -79,9 +82,14 @@ const RequestQuoteForm = () => {
             </Alert>
           )}
           
-          <Form onSubmit={handleSubmit}>
-            {/* Hidden field for subject */}
+          <Form onSubmit={handleSubmit} action="https://formsubmit.co/ashishprabhu2143@gmail.com" method="POST">
+            {/* Hidden fields for FormSubmit.co */}
             <input type="hidden" name="_subject" value="New Concrete Quote Request" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="true" />
+            
+            {/* Redirect after successful submission */}
+            <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
 
             {/* Contact Details Section */}
             <Card className="mb-4 border-0 bg-light">
