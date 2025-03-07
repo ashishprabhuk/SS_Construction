@@ -1,8 +1,8 @@
 .image-slider {
-    --image-slider-primary: #25D366;
+    --image-slider-primary: #01612B;
     --image-slider-secondary: #ffd500;
     --image-slider-text: #f8fafc;
-    --image-slider-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --image-slider-shadow: 0 8px 32px #01612b1a;
     --image-slider-radius: 0px;
     --image-slider-glass: rgba(255, 255, 255, 0.1);
     --image-slider-glass-border: 1px solid rgba(255, 255, 255, 0.2);
@@ -226,7 +226,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  background: #002f146b; /* Black overlay with 50% opacity */
   z-index: 1; /* Below pagination dots */
 }
 

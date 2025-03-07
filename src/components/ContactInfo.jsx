@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
 import { Card, Col, Row, Container } from 'react-bootstrap';
+import map from "../assets/icon/map-pin-duotone.svg";
+import phone from "../assets/icon/phone-duotone.svg";
+import email from "../assets/icon/email.svg";
 import "./ContactInfo.css";
 
 const ContactInfo = () => {
@@ -23,7 +26,7 @@ const ContactInfo = () => {
             {/* Location Section */}
             <Col md={4} className="d-flex flex-column align-items-center text-center">
               <div className="icon-wrapper bg-primary-soft rounded-circle p-3 mb-3">
-                <FaMapMarkerAlt className="text-primary fs-5" />
+                <img src={map} alt="map" />
               </div>
               <h3 className="h6 fw-bold mb-3">Our Location</h3>
               <address className="mb-0">
@@ -40,7 +43,7 @@ const ContactInfo = () => {
             {/* Contact Numbers Section */}
             <Col md={4} className="d-flex flex-column align-items-center text-center">
               <div className="icon-wrapper bg-primary-soft rounded-circle p-3 mb-3">
-                <FaPhone className="text-primary fs-5" />
+                <img src={phone} alt="phone" />
               </div>
               <h3 className="h6 fw-bold mb-3">Contact Numbers</h3>
               <ul className="list-unstyled mb-0">
@@ -60,7 +63,7 @@ const ContactInfo = () => {
             {/* Email Section */}
             <Col md={4} className="d-flex flex-column align-items-center text-center">
               <div className="icon-wrapper bg-primary-soft rounded-circle p-3 mb-3">
-                <FaEnvelope className="text-primary fs-5" />
+                <img src={email} alt="email" />
               </div>
               <h3 className="h6 fw-bold mb-3">Email Address</h3>
               <a href="mailto:ssultrareadymix@gmail.com" className="text-decoration-none text-dark hover-text-primary">

@@ -118,11 +118,12 @@
 
 
 .header {
-  background: rgba(252, 245, 235, 0.4); /* Light transparent background */
-  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  background: rgb(255, 255, 255);
+  /* backdrop-filter: blur(10px); */
+  /* -webkit-backdrop-filter: blur(10px); */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   transition: background 0.3s ease-in-out;
+  box-shadow: 0 10px 30px #01612b1a;
 }
 
 .header .nav-link {
@@ -141,14 +142,14 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #25D366;
+  background-color: #01612B;
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
 
 .header .nav-link:hover {
-  color: #25D366 !important;
+  color: #01612B !important;
   transform: translateY(-2px);
 }
 
@@ -166,10 +167,10 @@
 }
 
 #req-btn {
-  background-color: #25D366;
+  background-color: #01612B;
   border: 1.5px solid #1A1A19;
   padding: 10px 20px;
-  color: #1A1A19;
+  color: #ffffff;
   border-radius: 25px;
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
   backdrop-filter: blur(10px);
@@ -182,7 +183,6 @@
   transform: scale(1.05);
 }
 
-/* Button outline transition */
 .btn-outline-light {
   border-color: rgba(255, 255, 255, 0.3);
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
@@ -199,7 +199,6 @@
   transform: scale(1.05);
 }
 
-/* Custom Hamburger Icon */
 .menu-toggle {
   background: none;
   border: none;
@@ -216,7 +215,6 @@
   justify-content: center;
 }
 
-/* Hide hamburger on large screens */
 @media (min-width: 992px) {
   .menu-toggle {
     display: none;

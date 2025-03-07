@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./TypingAnimation.css";
 
 const words = ["quality", "service", "safety"];
 const typingSpeed = 150; // Speed of typing in ms per letter
@@ -39,7 +40,7 @@ const TypingAnimation = () => {
   return (
     <>
     {/* <h1></h1> */}
-    <h1 className="text-4xl display-2 text-white text-uppercase fw-bolder font-bold">
+    <h1 className="typer text-4xl display-2 text-uppercase fw-bolder font-bold">
       {text}
       <span className="animate-blink mb-2 justify-content-start text-white">|</span>
     </h1>

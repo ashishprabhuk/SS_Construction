@@ -7,3 +7,8 @@
     from, to { opacity: 1; }
     50% { opacity: 0; }
   }
+
+  .typer{
+    color: #01612b;
+    -webkit-text-stroke: 2px #fff; /* width and color */
+  }

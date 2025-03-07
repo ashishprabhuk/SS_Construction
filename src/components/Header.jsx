@@ -2,7 +2,11 @@ import { useState } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ssLogo from "../assets/sscon.png";
-import scroll from "../assets/Footer/scroll-light.svg";
+import scroll from "../assets/icon/scroll-light.svg";
+import home from "../assets/icon/house-line-duotone.svg";
+import service from "../assets/icon/gear.svg";
+import about from "../assets/icon/info-duotone.svg";
+import contact from "../assets/icon/address-book-duotone.svg";
 import "./Header.css";
 
 export default function Header() {
@@ -12,7 +16,7 @@ export default function Header() {
     <Navbar
       expanded={expanded}
       onToggle={setExpanded}
-      className="header bg-#FCF5EB border-bottom border-1 border-dark"
+      className="header"
       variant="light"
       expand="lg"
       fixed="top"
@@ -35,16 +39,36 @@ export default function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
             <Nav.Link as={Link} to="/" onClick={() => setExpanded(false)}>
-              Home
+              <div className="d-flex align-items-center gap-1">
+                <img src={home} alt="home" />
+                <div>Home</div>
+              </div>
             </Nav.Link>
-            <Nav.Link as={Link} to="/services" onClick={() => setExpanded(false)}>
-              Services
+            <Nav.Link
+              as={Link}
+              to="/services"
+              onClick={() => setExpanded(false)}
+            >
+              <div className="d-flex align-items-center gap-1">
+                <img src={service} alt="service" />
+                <div>Services</div>
+              </div>
             </Nav.Link>
             <Nav.Link as={Link} to="/about" onClick={() => setExpanded(false)}>
-              About
+            <div className="d-flex align-items-center gap-1">
+                <img src={about} alt="about" />
+                <div>About</div>
+              </div>
             </Nav.Link>
-            <Nav.Link as={Link} to="/contact" onClick={() => setExpanded(false)}>
-              Contact
+            <Nav.Link
+              as={Link}
+              to="/contact"
+              onClick={() => setExpanded(false)}
+            >
+              <div className="d-flex align-items-center gap-1">
+                <img src={contact} alt="contact" />
+                <div>Contact</div>
+              </div>
             </Nav.Link>
           </Nav>
 
@@ -55,7 +79,7 @@ export default function Header() {
             onClick={() => setExpanded(false)}
           >
             <div className="scroll-img d-flex align-content-center gap-1 text-center">
-              <img src={scroll} alt="scroll" className="scroll-img"/>
+              <img src={scroll} alt="scroll" className="scroll-img" />
               Request a quote
             </div>
           </Link>

@@ -1,0 +1,23 @@
+/* WhyChoose.css */
+#why-choose-us {
+    position: relative;
+  }
+  
+  .feature-card {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Optional: Add this if you want a background pattern */
+  #why-choose-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: radial-gradient(circle at 10px 10px, rgba(1, 97, 43, 0.03) 3px, transparent 0);
+    background-size: 30px 30px;
+    opacity: 0.4;
+    z-index: 0;
+  }

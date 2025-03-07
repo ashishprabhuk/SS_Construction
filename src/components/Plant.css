@@ -10,6 +10,12 @@
     margin: 15px 0 5px 0;
   }
 
-  /* #plant-bgc{
-    background: linear-gradient(to bottom, #111B21, #FCF5EB);
-  } */
+  .plants-overlay {
+    background: linear-gradient(to top, #000000, #00000000);
+    padding: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-const ImageRoller = ({ images, slideDuration, imageWidth, fadeColor = '#FCF5EB', imageHeight = '60px' }) => {
+const ImageRoller = ({ images, slideDuration, imageWidth, fadeColor = '#e8fff1', imageHeight = '60px' }) => {
   return (
     <div style={{ 
       overflow: 'hidden',

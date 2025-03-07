@@ -21,9 +21,9 @@
 
   /* Home.css */
 
-  .home-page{
+  /* .home-page{
     background-color: #FCF5EB;
-  }
+  } */
 
   .hero {
     display: flex;
@@ -59,7 +59,7 @@
 }
 
 .roller{
-  background-color: #FCF5EB;
+  background-color: #e8fff1;
 }
 
 /* Responsive Grid */
