@@ -4,6 +4,7 @@ import img3 from "../assets/Plants/leyland.jpg";
 import img4 from "../assets/Plants/putz.png";
 import tata from "../assets/Plants/TATA Transit.jpg";
 import schwing from "../assets/Plants/Stationary-Pump.jpg";
+import jcb from "../assets/Plants/JCB.jpeg";
 
 export const plants = [
   {
@@ -42,9 +43,9 @@ export const plants = [
     availability: 1,
   },
   {
-    title: "Putzmeister",
-    image: img4,
-    make: "Putz",
+    title: "JCB",
+    image: jcb,
+    make: "JCB",
     capacity: "1400",
     availability: 1,
   },
