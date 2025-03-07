@@ -6,6 +6,9 @@ import {
   FaUsers,
   FaFlask,
 } from "react-icons/fa";
+import Eye from "../assets/About/eye-light.svg";
+import Target from "../assets/About/target.svg";
+import Lab from "../assets/About/flaskb.svg";
 import profile from "../assets/About/Profile.jpg";
 import ceo from "../assets/About/ceo.jpg";
 import companyImage from "../assets/About/flag.jpg";
@@ -64,7 +67,7 @@ const AboutSection = () => {
               >
                 <Card.Body>
                   {/* <FaEye className="display-4 text-success mb-3" /> */}
-                  
+                  <img src={Eye} alt="eye" className="mb-3"/>
                   <h3
                     className="pb-3"
                     style={{
@@ -93,7 +96,7 @@ const AboutSection = () => {
                 style={{ borderRadius: "20px" }}
               >
                 <Card.Body>
-                  <FaBullseye className="display-4 text-danger mb-3" />
+                  <img src={Target} alt="target" className="mb-3"/>
                   <h3
                     className="pb-3"
                     style={{
@@ -137,7 +140,7 @@ const AboutSection = () => {
       <section className="lab-section py-5 bg-white">
         <Container>
           <h2 className="text-center mb-5">
-            <FaFlask className="me-2" /> Our Laboratory
+            <img src={Lab} alt="lab" /> Our Laboratory
           </h2>
           <Row className="align-items-center g-4">
             <Col md={7} className="text-center">
@@ -210,7 +213,7 @@ const AboutSection = () => {
                   />
                   <Card.Body className="leader-body">
                     <Card.Title className="fw-bold">{leader.name}</Card.Title>
-                    <Card.Subtitle className="leader-role mb-3">
+                    <Card.Subtitle className="leader-desc leader-role mb-3">
                       {leader.role}
                     </Card.Subtitle>
                     <Card.Text className="text-secondary">

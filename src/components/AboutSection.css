@@ -101,7 +101,7 @@
 }
 
 .leader-body {
-  background-color: #fcf5eb;
+  /* background-color: #fcf5eb; */
   border-radius: 0px 0px 20px 20px;
   padding: 20px;
 }
@@ -109,4 +109,10 @@
 .leader-role {
   color: #25D366;
   font-weight: 600;
+}
+
+
+.leader-desc{
+  color: #01612B !important;
+  font-size: 1.1rem;
 }
