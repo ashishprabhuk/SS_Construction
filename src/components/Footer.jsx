@@ -39,11 +39,11 @@ export default function Footer() {
             <ul className="list-unstyled">
               <li className="mb-3">
                 <i className="bi bi-telephone me-2 text-white"></i>
-                <a href="tel:+919842459234" className="text-secondary">+91 98424 59234</a>
+                <a href="tel:+919842459234" className="text-secondary text-decoration-none">+91 98424 59234</a>
               </li>
               <li className="mb-3">
                 <i className="bi bi-telephone me-2 text-white"></i>
-                <a href="tel:+918870536435" className="text-secondary">+91 88705 36435</a>
+                <a href="tel:+918870536435" className="text-secondary text-decoration-none">+91 88705 36435</a>
               </li>
             </ul>
           </Col>
@@ -53,7 +53,7 @@ export default function Footer() {
             <h5 className="text-uppercase text-white mb-4">Send Us A Message</h5>
             <div className="text-secondary">
               <i className="bi bi-envelope me-2 text-white"></i>
-              <a href="mailto:ssultrareadymix@gmail.com" className="text-secondary">
+              <a href="mailto:ssultrareadymix@gmail.com" className="text-secondary text-decoration-none">
                 ssultrareadymix@gmail.com
               </a>
             </div>

@@ -6,13 +6,20 @@ import ImageRoller from "../components/ImageRoller";
 import Plant from "../components/Plant";
 import WhyChoose from "../components/WhyChoose";
 import ProjectShowcase from "../components/ProjectShowcase";
+import Slider from "./Slider";
 
 export default function Home() {
+  const textContent = [
+    { title: "Custom Title 1", subtitle: "Custom subtitle text here" },
+    { title: "Custom Title 2", subtitle: "Another custom subtitle" },
+    { title: "Custom Title 3", subtitle: "Your third custom subtitle" },
+  ];
   return (
     <div className="home-page">
       {/* Slider Section */}
       <section className="hero">
-        <ImageSlider images={sliderImages} />
+        {/* <ImageSlider images={sliderImages} textContent={textContent}/> */}
+        <Slider/>
       </section>
 
       <WhyChoose />

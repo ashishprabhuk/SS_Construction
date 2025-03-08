@@ -167,10 +167,10 @@
 }
 
 #req-btn {
-  background-color: #01612B;
-  border: 1.5px solid #1A1A19;
+  background-color: #CCDFD5;
+  border: 2px solid #01612B;
   padding: 10px 20px;
-  color: #ffffff;
+  color: #01612B;
   border-radius: 25px;
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
   backdrop-filter: blur(10px);

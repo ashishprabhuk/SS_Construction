@@ -104,6 +104,7 @@
 
 
 import { Container, Row, Col, Card, Image } from "react-bootstrap";
+import { motion } from "framer-motion";
 import { plants } from "../Models/Plant";
 
 const Plant = () => {
@@ -114,7 +115,13 @@ const Plant = () => {
           <h1 className="plant-main-heading display-6 text-center fw-bold my-3">
             Plants & Machineries
           </h1>
-          <div className="plant-section-divider" style={{ margin: "0 auto 30px", width: "80px", height: "4px", background: "#3498db", borderRadius: "2px" }}></div>
+          <motion.div
+              className="section-underline"
+              initial={{ width: 0 }}
+              animate={{ width: "6rem" }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+            ></motion.div>
+          {/* <div className="plant-section-divider" style={{ margin: "0 auto 30px", width: "80px", height: "4px", background: "#3498db", borderRadius: "2px" }}></div> */}
 
           <Row className="g-4 mt-3">
             {plants.map((plant, index) => (

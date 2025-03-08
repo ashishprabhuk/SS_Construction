@@ -1,8 +1,9 @@
-import ContactSection from '../components/ContactSection'
+import ContactSection from '../components/ContactSection';
+import "./Contact.css"
 
 export default function Contact() {
   return (
-    <section className="py-5">
+    <section className="contact-page py-5">
       <ContactSection />
     </section>
   )

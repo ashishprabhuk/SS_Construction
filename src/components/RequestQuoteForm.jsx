@@ -635,7 +635,7 @@ const RequestQuoteForm = () => {
                       className="section-number"
                       whileHover={{ 
                         scale: 1.1, 
-                        backgroundColor: "#0056b3",
+                        backgroundColor: "#F8C301",
                         transition: { duration: 0.2 }
                       }}
                     >3</motion.span>

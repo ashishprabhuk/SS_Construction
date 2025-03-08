@@ -604,8 +604,12 @@ const ContactSection = () => {
           variants={headerVariants}
         >
           <h2 className="fw-bold display-4 mb-3">Contact Us</h2>
-          <div className="gradient-underline mx-auto"></div>
-          <div className="section-underline"></div>
+          <motion.div
+          className="section-underline"
+          initial={{ width: 0 }}
+          animate={{ width: "6rem" }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+        ></motion.div>
           <p className="text-muted mt-3 lead">
             We're here to help with any questions you might have
           </p>
@@ -639,14 +643,14 @@ const ContactSection = () => {
                           </div>
                           <div className="ms-3">
                             <h4 className="fs-5 mb-1">Location</h4>
-                            <p className="mb-0 text-muted">
+                            <p className="mb-0 text-muted fw-bold">
                               SS Ultra Readymix Concrete
                             </p>
                             <a
                               href="https://maps.app.goo.gl/58z7Tg47F45N1FQX8"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-decoration-none text-dark hover-text-primary"
+                              className="text-decoration-none text-muted hover-text-primary"
                             >
                               41/2A2, Kollidam River Bed,
                               <br />
@@ -667,12 +671,11 @@ const ContactSection = () => {
                           </div>
                           <div className="ms-3">
                             <h4 className="fs-5 mb-1">Phone</h4>
-                            <p className="mb-0 text-muted">+91 99999 88888</p>
                             <ul className="list-unstyled mb-0">
                               <li className="mb-2">
                                 <a
                                   href="tel:+91 9842459234"
-                                  className="text-decoration-none text-dark hover-text-primary d-block"
+                                  className="text-decoration-none text-muted text-dark hover-text-success d-block"
                                 >
                                   +91 98424 59234
                                 </a>
@@ -680,7 +683,7 @@ const ContactSection = () => {
                               <li>
                                 <a
                                   href="tel:+91 8870536435"
-                                  className="text-decoration-none text-dark hover-text-primary d-block"
+                                  className="text-decoration-none text-muted text-dark hover-text-success d-block"
                                 >
                                   +91 88705 36435
                                 </a>
@@ -701,7 +704,7 @@ const ContactSection = () => {
                             <h4 className="fs-5 mb-1">Email</h4>
                             <a
                               href="mailto:ssultrareadymix@gmail.com"
-                              className="text-decoration-none text-dark hover-text-primary"
+                              className="text-decoration-none text-muted hover-text-primary"
                             >
                               ssultrareadymix@gmail.com
                             </a>
@@ -713,7 +716,7 @@ const ContactSection = () => {
                         className="contact-social mt-5"
                         variants={itemVariants}
                       >
-                        <h4 className="fs-5 mb-3">Follow Us</h4>
+                        <h4 className="fs-5 mb-2">Follow Us</h4>
                         <div className="social-icons d-flex gap-3">
                           <motion.a 
                             href="#" 
@@ -743,7 +746,7 @@ const ContactSection = () => {
             <Col lg={7}>
               <motion.div variants={itemVariants}>
                 <Card className="contact-form-card border-0 shadow-sm">
-                  <Card.Body className="p-4 p-lg-5">
+                  <Card.Body className="p-4 mb-4">
                     {formStatus === "success" ? (
                       <motion.div 
                         className="text-center success-message py-5"
@@ -774,7 +777,7 @@ const ContactSection = () => {
                       </motion.div>
                     ) : (
                       <>
-                        <h3 className="form-title mb-4">Send a Message</h3>
+                        <h3 className="contact-card-title mb-4">Send Message</h3>
 
                         {formStatus === "error" && (
                           <motion.div 
@@ -802,7 +805,7 @@ const ContactSection = () => {
                                     required
                                     type="text"
                                     name="name"
-                                    placeholder="John Doe"
+                                    placeholder="Your Name"
                                     className="form-input"
                                   />
                                 </Form.Group>
@@ -832,7 +835,7 @@ const ContactSection = () => {
                                     required
                                     type="tel"
                                     name="phone"
-                                    placeholder="+91 98765 43210"
+                                    placeholder="+91 XXXXX XXXXX"
                                     className="form-input"
                                   />
                                 </Form.Group>
@@ -860,7 +863,7 @@ const ContactSection = () => {
                                   <Form.Control
                                     required
                                     as="textarea"
-                                    rows={5}
+                                    rows={3}
                                     name="message"
                                     placeholder="Write your message here..."
                                     className="form-input"
@@ -869,7 +872,7 @@ const ContactSection = () => {
                               </motion.div>
                             </Col>
 
-                            <Col md={12}>
+                            <Col md={12} className="d-flex justify-content-center">
                               <motion.div
                                 variants={itemVariants}
                                 whileHover={{ scale: 1.03 }}
@@ -878,6 +881,8 @@ const ContactSection = () => {
                                 <Button
                                   variant="primary"
                                   type="submit"
+                                  id="req-btn"
+                                
                                   className="submit-button"
                                   disabled={isSubmitting}
                                 >

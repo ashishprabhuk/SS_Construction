@@ -46,7 +46,12 @@ const ServicesSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="display-4 fw-bold">Services Offered</h2>
-          <div className="section-underline"></div>
+          <motion.div
+          className="section-underline"
+          initial={{ width: 0 }}
+          animate={{ width: "6rem" }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+        ></motion.div>
         </motion.div>
 
         <ServiceStackCards />
