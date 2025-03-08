@@ -45,7 +45,7 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="display-4 fw-bold">Services Offered</h2>
+          <h2 className="display-4 pt-3 fw-bold">Services Offered</h2>
           <motion.div
           className="section-underline"
           initial={{ width: 0 }}

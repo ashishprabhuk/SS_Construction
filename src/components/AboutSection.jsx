@@ -316,7 +316,7 @@ const AboutSection = () => {
       {/* Management Section */}
       <motion.section
         id="management"
-        className="management-section pt-5 pb-3 bg-light"
+        className="management-section py-5 bg-light"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

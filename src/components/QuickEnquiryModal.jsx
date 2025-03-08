@@ -110,8 +110,8 @@ const QuickEnquiryModal = ({ show, onHide }) => {
       centered
       backdrop="static"
     >
-      <Modal.Header closeButton>
-        <Modal.Title className="text-primary">
+      <Modal.Header className='d-flex justify-content-center align-items-center' closeButton>
+        <Modal.Title className="d-flex justify-content-center align-items-center text-dark text-center fw-bold">
           {formStatus === 'success' ? 'Thank You!' : 'Quick Enquiry'}
         </Modal.Title>
       </Modal.Header>
@@ -335,7 +335,7 @@ const QuickEnquiryModal = ({ show, onHide }) => {
             Close
           </Button>
           <motion.button 
-            className="btn btn-primary"
+            className="btn btn-success"
             type="submit"
             form="quickEnquiryForm"
             disabled={isSubmitting}

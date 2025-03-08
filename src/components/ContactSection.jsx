@@ -603,7 +603,7 @@ const ContactSection = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={headerVariants}
         >
-          <h2 className="fw-bold display-4 mb-3">Contact Us</h2>
+          <h2 className="fw-bold display-4 mb-3 pt-3">Contact Us</h2>
           <motion.div
           className="section-underline"
           initial={{ width: 0 }}
