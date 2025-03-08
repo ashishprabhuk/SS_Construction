@@ -37,9 +37,9 @@ export default function Header() {
         </button>
 
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto">
+          <Nav className="mx-auto mobile-nav">
             <Nav.Link as={Link} to="/" onClick={() => setExpanded(false)}>
-              <div className="d-flex align-items-center gap-1">
+              <div className="d-flex align-items-center gap-1 nav-item-mobile">
                 <img src={home} alt="home" />
                 <div>Home</div>
               </div>
@@ -49,13 +49,13 @@ export default function Header() {
               to="/services"
               onClick={() => setExpanded(false)}
             >
-              <div className="d-flex align-items-center gap-1">
+              <div className="d-flex align-items-center gap-1 nav-item-mobile">
                 <img src={service} alt="service" />
                 <div>Services</div>
               </div>
             </Nav.Link>
             <Nav.Link as={Link} to="/about" onClick={() => setExpanded(false)}>
-            <div className="d-flex align-items-center gap-1">
+              <div className="d-flex align-items-center gap-1 nav-item-mobile">
                 <img src={about} alt="about" />
                 <div>About</div>
               </div>
@@ -65,7 +65,7 @@ export default function Header() {
               to="/contact"
               onClick={() => setExpanded(false)}
             >
-              <div className="d-flex align-items-center gap-1">
+              <div className="d-flex align-items-center gap-1 nav-item-mobile">
                 <img src={contact} alt="contact" />
                 <div>Contact</div>
               </div>
@@ -74,7 +74,7 @@ export default function Header() {
 
           <Link
             to="/request"
-            className="btn btn-outline-light"
+            className="btn btn-outline-light mobile-quote-btn"
             id="req-btn"
             onClick={() => setExpanded(false)}
           >

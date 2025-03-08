@@ -56,7 +56,7 @@ const AboutSection = () => {
       {/* Hero Section */}
       <motion.section
         id="hero"
-        className="hero-section text-center py-5 relative"
+        className="hero-section text-center pt-5 pb-3 relative"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -316,7 +316,7 @@ const AboutSection = () => {
       {/* Management Section */}
       <motion.section
         id="management"
-        className="management-section py-5 bg-light"
+        className="management-section pt-5 pb-3 bg-light"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

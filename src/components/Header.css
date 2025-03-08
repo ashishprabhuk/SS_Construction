@@ -247,3 +247,31 @@
 .scroll-img:hover {
   filter: brightness(0) invert(1); 
 }
+
+@media (max-width: 991.98px) {
+  .mobile-nav {
+    align-items: flex-start;
+    padding: 1rem 0;
+    width: 100%;
+  }
+  
+  .nav-item-mobile {
+    padding: 0.5rem 0;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .navbar-nav .nav-link {
+    padding-left: 1rem;
+  }
+  
+  .mobile-quote-btn {
+    margin: 1rem 0;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  #basic-navbar-nav {
+    padding: 1rem 0;
+  }
+}

@@ -62,7 +62,7 @@ export default function Footer() {
           {/* Social Links */}
           <Col lg={3} md={6} className="h-100">
             <h5 className="text-uppercase text-white mb-4">Connect With Us</h5>
-            <div className="d-flex gap-2">
+            <div className="d-flex  gap-2">
               <a href="https://wa.me/7010076370" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center">
                 <i className="bi bi-whatsapp text-white"></i>
               </a>
