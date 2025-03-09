@@ -22,18 +22,9 @@ export default function Home() {
   ];
   return (
     <div className="home-page">
-      {/* Slider Section */}
       <section className="hero">
-        {/* <ImageSlider images={sliderImages} textContent={textContent}/> */}
-        {/* <Slider/> */}
-        {/* <HeroGrid /> */}
-        {/* <HeroSectionSlider/> */}
-        {/* <BlenderModeSlider /> */}
         <HeroSlider />
       </section>
-
-        {/* <HeroSection images={sliderImages} /> */}
-      {/* <Parallax images={sliderImages} /> */}
 
       <WhyChoose />
 
