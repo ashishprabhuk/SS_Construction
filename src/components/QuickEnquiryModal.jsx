@@ -255,16 +255,13 @@ const QuickEnquiryModal = ({ show, onHide }) => {
                     <Row>
                       <Col md={6}>
                         <Form.Group className="mb-3">
-                          <Form.Label>Concrete Type <span className="text-danger">*</span></Form.Label>
-                          <Form.Select 
+                        <Form.Label>Concrete Type <span className="required">*</span></Form.Label>
+                          <Form.Control 
+                            type="text" 
                             name="concreteType" 
-                            required
-                          >
-                            <option value="">Select Mix Type</option>
-                            <option>Ready-Mix Concrete</option>
-                            <option>Precast Concrete</option>
-                            <option>High-Strength Concrete</option>
-                          </Form.Select>
+                            required 
+                            placeholder="Enter Mix Type"
+                          />
                         </Form.Group>
                       </Col>
                       <Col md={6}>

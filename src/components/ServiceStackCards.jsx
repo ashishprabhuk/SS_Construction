@@ -91,7 +91,7 @@ const services = [
 
 const ServiceStackCards = () => {
   return (
-    <Container className="stack-cards-container py-4">
+    <Container className="stack-cards-container pt-1 pb-2">
       <Row className="g-4 d-flex flex-wrap justify-content-center">
         {services.map((service, index) => (
           <Col key={index} xs={12} sm={6} md={6} lg={3} className="d-flex">

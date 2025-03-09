@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     padding: 4rem 0 0;
+    background-color: #fff !important;
   }
 
 /* Features Section */
@@ -32,9 +33,6 @@
   font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
-.roller{
-  /* background-color: #e8fff1; */
-}
 
 /* Responsive Grid */
 

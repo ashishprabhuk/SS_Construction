@@ -4,8 +4,6 @@ import {
   Row, 
   Col, 
   Form, 
-  Button, 
-  Card, 
   Alert
 } from 'react-bootstrap';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -15,37 +13,70 @@ import './RequestQuoteForm.css';
 const RequestQuoteForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formStatus, setFormStatus] = useState(null);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessages, setErrorMessages] = useState([]);
+
+  const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const isValidPhone = (phone) => phone.replace(/\D/g, '').length >= 7;
+  const isValidDate = (date) => new Date(date) >= new Date(new Date().setHours(0,0,0,0));
+
+  const validateForm = (formData) => {
+    const errors = [];
+    const fields = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      concreteType: formData.get('concreteType'),
+      quantity: formData.get('quantity'),
+      preferredDate: formData.get('preferredDate'),
+      address: formData.get('address')
+    };
+
+    if (!fields.name.trim()) errors.push('Full Name is required');
+    if (!fields.email.trim()) errors.push('Email is required');
+    else if (!isValidEmail(fields.email)) errors.push('Invalid email format');
+    if (!fields.phone.trim()) errors.push('Phone number is required');
+    else if (!isValidPhone(fields.phone)) errors.push('Phone number must contain at least 7 digits');
+    if (!fields.concreteType.trim()) errors.push('Concrete type is required');
+    if (!fields.quantity || isNaN(fields.quantity) || parseFloat(fields.quantity) <= 0) 
+      errors.push('Quantity must be a positive number');
+    if (!fields.preferredDate) errors.push('Preferred date is required');
+    else if (!isValidDate(fields.preferredDate)) errors.push('Date cannot be in the past');
+    if (!fields.address.trim()) errors.push('Delivery address is required');
+
+    return errors;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setFormStatus(null);
-    setErrorMessage('');
+    setErrorMessages([]);
 
     const formData = new FormData(e.target);
-    
-    // Add a timestamp to make each submission unique
     formData.append('_timestamp', new Date().toISOString());
+
+    const validationErrors = validateForm(formData);
+    if (validationErrors.length > 0) {
+      setErrorMessages(validationErrors);
+      setFormStatus('error');
+      setIsSubmitting(false);
+      alert("Please fill the form correctly");
+      return;
+    }
 
     try {
       const response = await fetch("https://formsubmit.co/ajax/ssultrareadymix@gmail.com", {
         method: "POST",
-        headers: {
-          'Accept': 'application/json'
-        },
+        headers: { 'Accept': 'application/json' },
         body: formData
       });
-      
+
       const responseData = await response.json();
-      
-      if (!response.ok) {
-        throw new Error(responseData.message || 'Submission failed');
-      }
+      if (!response.ok) throw new Error(responseData.message || 'Submission failed');
       
       setFormStatus('success');
     } catch (error) {
-      setErrorMessage(error.message || 'There was an error submitting the form. Please try again.');
+      setErrorMessages([error.message || 'There was an error submitting the form. Please try again.']);
       setFormStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -164,7 +195,7 @@ const RequestQuoteForm = () => {
   }
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait" initial={false}>
       <motion.div
         key="form"
         initial="hidden"
@@ -175,7 +206,7 @@ const RequestQuoteForm = () => {
         <Container fluid className="form-container">
           <Row className="justify-content-center">
             <Col xl={10} lg={11}>
-              <motion.div 
+            <motion.div 
                 className="form-header"
                 variants={sectionVariants}
               >
@@ -187,29 +218,32 @@ const RequestQuoteForm = () => {
                 ></motion.div>
                 <p>Fill out the form below to get a customized quote for your project</p>
               </motion.div>
-              
+
               <AnimatePresence>
                 {formStatus === 'error' && (
-                  <motion.div 
-                    className="error-message"
+                  <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
+                    className="mb-4"
                   >
-                    <p>{errorMessage}</p>
+                    <Alert variant="danger" dismissible onClose={() => setFormStatus(null)}>
+                      {errorMessages.map((msg, index) => (
+                        <div key={index}>• {msg}</div>
+                      ))}
+                    </Alert>
                   </motion.div>
                 )}
               </AnimatePresence>
-              
-              <Form onSubmit={handleSubmit} action="https://formsubmit.co/ssultrareadymix@gmail.com" method="POST" className="quote-form">
-                {/* Hidden fields for FormSubmit.co */}
-                <input type="hidden" name="_subject" value="New Concrete Quote Request" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_captcha" value="true" />
-                <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
 
-                {/* Section 1: Contact Information */}
-                <motion.div 
+              <Form onSubmit={handleSubmit} className="quote-form">
+              <input type="hidden" name="_subject" value="New Concrete Quote Request" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="hidden" name="_captcha" value="true" />
+                  <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
+
+                 {/* Section 1: Contact Information */}
+                  <motion.div 
                   className="form-section"
                   variants={sectionVariants}
                 >
@@ -232,7 +266,7 @@ const RequestQuoteForm = () => {
                           <Form.Control 
                             type="text" 
                             name="name" 
-                            required 
+                            
                             placeholder="Enter your full name"
                           />
                         </Form.Group>
@@ -254,8 +288,8 @@ const RequestQuoteForm = () => {
                           <Form.Label>Email <span className="required">*</span></Form.Label>
                           <Form.Control 
                             type="email" 
-                            name="email" 
-                            required 
+                            name="email"
+                             
                             placeholder="your.email@example.com"
                           />
                         </Form.Group>
@@ -266,7 +300,6 @@ const RequestQuoteForm = () => {
                           <Form.Control 
                             type="tel" 
                             name="phone" 
-                            required 
                             placeholder="(123) 456-7890"
                           />
                         </Form.Group>
@@ -296,26 +329,25 @@ const RequestQuoteForm = () => {
                       <Col md={6}>
                         <Form.Group className="form-field">
                           <Form.Label>Concrete Type <span className="required">*</span></Form.Label>
-                          <Form.Select 
+                          <Form.Control 
+                            type="text" 
                             name="concreteType" 
-                            required
-                          >
-                            <option value="">Select Mix Type</option>
-                            <option>Ready-Mix Concrete</option>
-                            <option>Precast Concrete</option>
-                            <option>High-Strength Concrete</option>
-                          </Form.Select>
+                            placeholder="Enter Mix Type"
+                          />
+                          
                         </Form.Group>
                       </Col>
                       <Col md={6}>
                         <Form.Group className="form-field">
-                          <Form.Label>Grade/Strength <span className="required">*</span></Form.Label>
-                          <Form.Control 
-                            type="text" 
+                          <Form.Label>Grade/Strength</Form.Label>
+                          <Form.Select 
                             name="grade" 
-                            required 
-                            placeholder="e.g., M25, C30/37"
-                          />
+                          >
+                            <option value="">Select Grade</option>
+                            <option>M25</option>
+                            <option>C30</option>
+                            <option>C37</option>
+                          </Form.Select>
                         </Form.Group>
                       </Col>
                     </Row>
@@ -327,7 +359,6 @@ const RequestQuoteForm = () => {
                             type="number" 
                             step="0.1" 
                             name="quantity" 
-                            required 
                             placeholder="e.g., 10.5"
                           />
                         </Form.Group>
@@ -360,7 +391,6 @@ const RequestQuoteForm = () => {
                           <Form.Control 
                             type="date" 
                             name="preferredDate" 
-                            required 
                           />
                         </Form.Group>
                       </Col>
@@ -382,7 +412,6 @@ const RequestQuoteForm = () => {
                             as="textarea" 
                             rows={3} 
                             name="address" 
-                            required 
                             placeholder="Full delivery address including city, state/province, and postal code"
                           />
                         </Form.Group>
