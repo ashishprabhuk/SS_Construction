@@ -53,7 +53,6 @@ const AboutSection = () => {
 
   return (
     <Container fluid className="about-us-page">
-      {/* Hero Section */}
       <motion.section
         id="hero"
         className="hero-section text-center pt-5 pb-3 relative"

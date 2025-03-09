@@ -1,0 +1,100 @@
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    background: #000; /* fallback background */
+    margin: 0 auto;
+  }
+  
+  .slides-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Each slide covers the container fully */
+  .slide {
+    position: absolute;
+    inset: 0; /* top:0, right:0, bottom:0, left:0 */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+    /* Start from the right (off-screen) */
+    transform: translateX(100%);
+    transition: transform 0.8s ease-in-out;
+    opacity: 0;
+    /* Optional: If you want a blend mode overlay */
+    /* mix-blend-mode: luminosity; */
+  }
+  
+  .slide.active {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 1; /* bring active slide to the top */
+  }
+  
+  .slide-content {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    color: #fff;
+    max-width: 600px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .slide-content h2 {
+    font-size: 3rem;
+    margin: 0 0 0.5em;
+  }
+  
+  .slide-content p {
+    font-size: 1.25rem;
+  }
+  
+  /* Navigation Buttons */
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0.5em 0.75em;
+    border-radius: 3px;
+  }
+  
+  .prev {
+    left: 1rem;
+  }
+  .next {
+    right: 1rem;
+  }
+  
+  /* Dots / Hyphens */
+  .dots-container {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .dot {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+  
+  .dot.active,
+  .dot:hover {
+    opacity: 1;
+  }
+  

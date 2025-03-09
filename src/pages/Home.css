@@ -1,29 +1,3 @@
-/* .hero {
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url('https://source.unsplash.com/random/1920x1080/?technology') center/cover;
-    padding-top: 80px; 
-  }
-
-  
-  .card {
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);
-  }
-  
-  .bi {
-    vertical-align: -.125em;
-  } */
-
-
-  /* Home.css */
-
-  /* .home-page{
-    background-color: #FCF5EB;
-  } */
 
   .hero {
     display: flex;
@@ -59,7 +33,7 @@
 }
 
 .roller{
-  background-color: #e8fff1;
+  /* background-color: #e8fff1; */
 }
 
 /* Responsive Grid */
