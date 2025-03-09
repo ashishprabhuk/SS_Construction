@@ -6,12 +6,6 @@ import ImageRoller from "../components/ImageRoller";
 import Plant from "../components/Plant";
 import WhyChoose from "../components/WhyChoose";
 import ProjectShowcase from "../components/ProjectShowcase";
-import BlenderModeSlider from "../components/BlenderModeSlider";
-import Slider from "./Slider";
-import HeroSection from "../components/HeroSection";
-import Parallax from "../components/Parallax";
-import HeroGrid from "../components/HeroGrid";
-import HeroSectionSlider from "../components/HeroSectionSlider";
 import HeroSlider from "../components/HeroSlider";
 
 export default function Home() {
