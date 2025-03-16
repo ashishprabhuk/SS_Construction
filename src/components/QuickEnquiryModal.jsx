@@ -243,7 +243,7 @@ const QuickEnquiryModal = ({ show, onHide }) => {
                             type="tel" 
                             name="phone" 
                             required 
-                            placeholder="(123) 456-7890"
+                            placeholder="+91 XXXXX XXXXX"
                           />
                         </Form.Group>
                       </Col>
