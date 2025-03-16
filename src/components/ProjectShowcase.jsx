@@ -241,13 +241,13 @@ const ProjectShowcase = () => {
                 Let's discuss how we can bring your vision to life with our expertise and dedication to excellence.
               </motion.p>
             </Col>
-            <Col md={4} className="cta-button-container">
+            <Col md={4} className="cta-button-container mt-4 mt-md-0">
               <Link to="/contact">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Button className="cta-button">
+                  <Button  className="cta-button">
                     Contact Us Today
                   </Button>
                 </motion.div>
@@ -256,11 +256,6 @@ const ProjectShowcase = () => {
           </Row>
         </motion.div>
       </Container>
-
-      {/* Custom CSS remains unchanged */}
-            <style jsx>{`
-        
-      `}</style>
     </div>
   );
 };
