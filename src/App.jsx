@@ -15,15 +15,14 @@ import ScrollToTop from './components/ScrollToTop'
 
 export default function App() {
 
-  // eslint-disable-next-line no-unused-vars
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const modalShown = localStorage.getItem('enquiryModalShown');
+      const modalShown = sessionStorage.getItem('enquiryModalShown');
       if (!modalShown) {
         setShowEnquiryModal(true);
-        localStorage.setItem('enquiryModalShown', 'true');
+        sessionStorage.setItem('enquiryModalShown', 'true'); 
       }
     }, 10000);
 
@@ -32,7 +31,7 @@ export default function App() {
 
   return (
     <>
-      <ScrollToTop/>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -42,7 +41,7 @@ export default function App() {
         <Route path="/request" element={<Request />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer/>
+      <Footer />
       <ScrollToTopButton />
       <QuickEnquiryModal
         show={showEnquiryModal}
