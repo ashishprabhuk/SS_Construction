@@ -344,9 +344,16 @@ const RequestQuoteForm = () => {
                             name="grade" 
                           >
                             <option value="">Select Grade</option>
+                            <option>M5</option>
+                            <option>M10</option>
+                            <option>M15</option>
+                            <option>M20</option>
                             <option>M25</option>
-                            <option>C30</option>
-                            <option>C37</option>
+                            <option>M30</option>
+                            <option>M35</option>
+                            <option>M40</option>
+                            <option>M45</option>
+                            <option>M50</option>
                           </Form.Select>
                         </Form.Group>
                       </Col>

@@ -41,14 +41,14 @@ export default function Footer() {
           {/* Address */}
           <Col lg={3} md={6} className="h-100">
             <h5 className="text-uppercase text-white mb-4">Address</h5>
-            <address className="text-secondary">
+            <a href="https://maps.app.goo.gl/58z7Tg47F45N1FQX8" style={{textDecoration:'none'}} className="text-secondary">
               <i className="bi bi-geo-alt-fill me-2 text-white"></i>
               41/2A2, Kollidam River Bed,
               <br />
               Kondayampettai, Thiruvanaikovil,
               <br />
               Trichy - 620005
-            </address>
+            </a>
           </Col>
 
           {/* Contact */}
@@ -127,7 +127,7 @@ export default function Footer() {
           <Col className="text-center">
             <div className="fading-line"></div>
             <p className="mb-0 py-2 text-secondary">
-              &copy; {new Date().getFullYear()} SS Construction. All rights
+              &copy; {new Date().getFullYear()} SS Ultra Readymix Concrete. All rights
               reserved.
               <br className="d-md-none" />
               Developed by{" "}

@@ -113,7 +113,7 @@ const Plant = () => {
       <section id="plant-machinery-section" className="py-5">
         <Container>
           <h1 className="plant-main-heading display-6 text-center fw-bold my-3">
-            Plants & Machineries
+            Plants and Machinery
           </h1>
           <motion.div
               className="section-underline"
@@ -121,31 +121,51 @@ const Plant = () => {
               animate={{ width: "6rem" }}
               transition={{ delay: 0.5, duration: 0.8 }}
             ></motion.div>
-          {/* <div className="plant-section-divider" style={{ margin: "0 auto 30px", width: "80px", height: "4px", background: "#3498db", borderRadius: "2px" }}></div> */}
 
           <Row className="g-4 mt-3">
             {plants.map((plant, index) => (
               <Col key={index} md={6} lg={4}>
                 <Card className="plant-item-card h-100 border-0 overflow-hidden">
                   {/* Image Section */}
-                  <div className="plant-image-wrapper position-relative">
-                    <Image
-                      src={plant.image}
-                      fluid
-                      className="plant-thumbnail"
-                      alt={plant.title}
-                    />
-                    <div className="plant-title-overlay position-absolute w-100 p-3">
-                      <Card.Title className="plant-item-title h4 mb-0">
-                        {plant.title}
-                      </Card.Title>
+                  {plant.image && (
+                    <div className="plant-image-wrapper position-relative">
+                      <Image
+                        src={plant.image}
+                        fluid
+                        className="plant-thumbnail"
+                        alt={plant.title}
+                      />
+                      {plant.title && (
+                        <div className="plant-title-overlay position-absolute w-100 p-3">
+                          <Card.Title className="plant-item-title text-uppercase h4 mb-0">
+                            {plant.title}
+                          </Card.Title>
+                        </div>
+                      )}
                     </div>
-                  </div>
+                  )}
 
                   <Card.Body className="plant-item-details p-4">
-                    <p className="plant-spec-item mb-2"><span className="plant-spec-label">Make:</span> {plant.make}</p>
-                    <p className="plant-spec-item mb-2"><span className="plant-spec-label">Capacity:</span> {plant.capacity}</p>
-                    <p className="plant-spec-item mb-3"><span className="plant-spec-label">Availability:</span> {plant.availability}</p>
+                    {plant.make && (
+                      <p className="plant-spec-item mb-2">
+                        <span className="plant-spec-label">Make:</span> {plant.make}
+                      </p>
+                    )}
+                    {plant.capacity && (
+                      <p className="plant-spec-item mb-2">
+                        <span className="plant-spec-label">Capacity:</span> {plant.capacity}
+                      </p>
+                    )}
+                    {plant.model && (
+                      <p className="plant-spec-item mb-2">
+                        <span className="plant-spec-label">Model:</span> {plant.model}
+                      </p>
+                    )}
+                    {plant.availability && (
+                      <p className="plant-spec-item mb-3">
+                        <span className="plant-spec-label">Availability:</span> {plant.availability}
+                      </p>
+                    )}
                   </Card.Body>
                 </Card>
               </Col>

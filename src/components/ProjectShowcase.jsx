@@ -11,7 +11,7 @@ const ProjectShowcase = () => {
   const projects = [
     {
       id: 1,
-      title: "Airport Terminal Building",
+      title: "Runway concrete,\nTrichy's New International Airport",
       description: "A 12-story commercial building with sustainable design features and smart office technology.",
       imageUrl: airport,
       category: "Government",
@@ -20,7 +20,7 @@ const ProjectShowcase = () => {
     },
     {
       id: 2,
-      title: "Indane gas by Indian oil Corporation limited (IOCL)",
+      title: "IOCL Gas Plant, Trichy",
       description: "A 12-story commercial building with sustainable design features and smart office technology.",
       imageUrl: iocl,
       category: "Government",
@@ -29,7 +29,7 @@ const ProjectShowcase = () => {
     },
     {
       id: 3,
-      title: "ITD cementation India ltd in Intl. Airport Terminal ",
+      title: "Trichy Airport Terminal Building by ITD cementation ltd",
       description: "A 12-story commercial building with sustainable design features and smart office technology.",
       imageUrl: itd,
       category: "Government",

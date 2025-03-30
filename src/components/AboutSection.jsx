@@ -33,20 +33,19 @@ const staggerChildren = {
 };
 
 const AboutSection = () => {
-
   const leader = [
     {
       name: "Er. S. Sakthivel",
       role: "Managing Director & CFO",
       description:
-        "M.Tech (Structural Engineering) with 30+ years of experience. Founder of Arutjothi Constructions.",
+        "Mr. S.Sakthivel has been a Managing Director of the SS Ultra Ready Mix Concrete company and brings his multi-business, multi-geography and multi-cultural exposure. A Master Graduate in Structural Engineering by qualification with around 30 years of experience in the construction Industry as Founder & Managing Director for M/s Arutjothi Constructions.Through his leadership, SS Ultra Ready Mix Concrete continues to redefine excellence in concrete production and distribution.",
       image: ceo,
     },
     {
       name: "Er. S. Srivarsan",
-      role: "Chief Executive Officer",
+      role: "Chief Executive",
       description:
-        "B.E. Civil Engineering. Technology-driven leader focused on sustainable construction and operational excellence.",
+        "As the dynamic CEO of SS Ultra Ready Mix Concrete with a Bachelors in Civil Engineering, he brings a fresh, innovative approach to the ready-mix concrete industry. With a passion for sustainable construction and cutting-edge technologies, he has transformed the company into a leader in high-quality, reliable concrete solutions. Known for a hands-on leadership style and strategic vision,he has led the company to maintain a strong focus on customer satisfaction, efficiency, and sustainability.",
       image: profile,
     },
   ];

@@ -9,8 +9,8 @@ import styled, { keyframes } from "styled-components";
 
 const slideData = [
   {
-    title: "Quality Construction",
-    subtitle: "Building Strong Foundations",
+    title: "Delivering Quality Concrete",
+    subtitle: "For Strong Construction",
     bg: airport,
     color: "#006994",
   },
