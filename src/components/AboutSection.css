@@ -149,8 +149,8 @@
 
 .leader-img {
   border-radius: 20px 20px 0px 0px;
-  height: 250px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .leader-body {

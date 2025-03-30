@@ -340,7 +340,11 @@ const AboutSection = () => {
                     <Card.Img
                       variant="top"
                       src={leader.image}
-                      className="leader-img"
+                      style={{
+                        width: "100%",
+                        height: "400px",
+                        objectFit: "cover",
+                      }}
                     />
                     <Card.Body className="leader-body">
                       <Card.Title className="fw-bold">{leader.name}</Card.Title>

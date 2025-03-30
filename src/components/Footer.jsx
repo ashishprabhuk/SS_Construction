@@ -128,9 +128,9 @@ export default function Footer() {
             <div className="fading-line"></div>
             <p className="mb-0 py-2 text-secondary">
               &copy; {new Date().getFullYear()} SS Ultra Readymix Concrete. All rights
-              reserved.
+              reserved. 
               <br className="d-md-none" />
-              Developed by{" "}
+              {" "}Developed by{" "}
               <a
                 href="https://www.andrometa.in"
                 className="text-white text-decoration-none"
