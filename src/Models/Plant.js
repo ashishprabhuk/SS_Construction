@@ -30,7 +30,7 @@ export const plants = [
   {
     title: "BSA PUMP",
     image: img4,
-    make: "Putzmeister",
+    make: "PUTZMEISTER",
     capacity: "1400",
     availability: 1,
   },

@@ -41,7 +41,11 @@ export default function Footer() {
           {/* Address */}
           <Col lg={3} md={6} className="h-100">
             <h5 className="text-uppercase text-white mb-4">Address</h5>
-            <a href="https://maps.app.goo.gl/58z7Tg47F45N1FQX8" style={{textDecoration:'none'}} className="text-secondary">
+            <a
+              href="https://maps.app.goo.gl/58z7Tg47F45N1FQX8"
+              style={{ textDecoration: "none" }}
+              className="text-secondary"
+            >
               <i className="bi bi-geo-alt-fill me-2 text-white"></i>
               41/2A2, Kollidam River Bed,
               <br />
@@ -105,7 +109,7 @@ export default function Footer() {
                 <i className="bi bi-whatsapp text-white"></i>
               </a>
               <a
-                href="https://www.instagram.com/ssultrareadymixconcrete/"
+                href="https://www.instagram.com/ssultrareadymix?igsh=Y2Rya2xnZjV0M2c2"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center"
@@ -127,10 +131,9 @@ export default function Footer() {
           <Col className="text-center">
             <div className="fading-line"></div>
             <p className="mb-0 py-2 text-secondary">
-              &copy; {new Date().getFullYear()} SS Ultra Readymix Concrete. All rights
-              reserved. 
-              <br className="d-md-none" />
-              {" "}Developed by{" "}
+              &copy; {new Date().getFullYear()} SS Ultra Readymix Concrete. All
+              rights reserved.
+              <br className="d-md-none" /> Developed by{" "}
               <a
                 href="https://www.andrometa.in"
                 className="text-white text-decoration-none"

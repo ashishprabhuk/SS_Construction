@@ -19,44 +19,46 @@ const ContactSection = () => {
     const errors = [];
     const invalidFields = {};
 
-    const name = formData.get('name').trim();
-    const email = formData.get('email').trim();
-    const phone = formData.get('phone').replace(/\D/g, ''); // Remove non-digits
-    const message = formData.get('message').trim();
+    const name = formData.get("name").trim();
+    const email = formData.get("email").trim();
+    const phone = formData.get("phone").replace(/\D/g, ""); // Remove non-digits
+    const message = formData.get("message").trim();
 
     // Name validation
     if (!name) {
-      errors.push('Full Name is required');
+      errors.push("Full Name is required");
       invalidFields.name = true;
     } else if (name.length < 2) {
-      errors.push('Name must be at least 2 characters');
+      errors.push("Name must be at least 2 characters");
       invalidFields.name = true;
     }
 
     // Email validation
     if (!email) {
-      errors.push('Email is required');
+      errors.push("Email is required");
       invalidFields.email = true;
     } else if (!isValidEmail(email)) {
-      errors.push('Invalid email format');
+      errors.push("Invalid email format");
       invalidFields.email = true;
     }
 
     // Phone validation
     if (!phone) {
-      errors.push('Phone number is required');
+      errors.push("Phone number is required");
       invalidFields.phone = true;
     } else if (!isValidPhone(phone)) {
-      errors.push('Phone must be a valid 10-digit Indian number starting with 6-9');
+      errors.push(
+        "Phone must be a valid 10-digit Indian number starting with 6-9"
+      );
       invalidFields.phone = true;
     }
 
     // Message validation
     if (!message) {
-      errors.push('Message is required');
+      errors.push("Message is required");
       invalidFields.message = true;
     } else if (message.length < 10) {
-      errors.push('Message must be at least 10 characters');
+      errors.push("Message must be at least 10 characters");
       invalidFields.message = true;
     }
 
@@ -92,11 +94,13 @@ const ContactSection = () => {
       );
 
       if (!response.ok) throw new Error("Submission failed");
-      
+
       setFormStatus("success");
       e.target.reset(); // Reset form on success
     } catch (error) {
-      setErrorMessages(["There was an error submitting the form. Please try again."]);
+      setErrorMessages([
+        "There was an error submitting the form. Please try again.",
+      ]);
       setFormStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -111,9 +115,9 @@ const ContactSection = () => {
       transition: {
         when: "beforeChildren",
         staggerChildren: 0.2,
-        duration: 0.5
-      }
-    }
+        duration: 0.5,
+      },
+    },
   };
 
   const itemVariants = {
@@ -121,55 +125,55 @@ const ContactSection = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.5 }
-    }
+      transition: { duration: 0.5 },
+    },
   };
 
   const headerVariants = {
     hidden: { opacity: 0, y: -20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { duration: 0.7, ease: "easeOut" }
-    }
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
   };
 
   const formInputVariants = {
     hidden: { opacity: 0, x: -10 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       x: 0,
-      transition: { duration: 0.3 }
-    }
+      transition: { duration: 0.3 },
+    },
   };
 
   const mapVariants = {
     hidden: { opacity: 0, scale: 0.95 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       scale: 1,
-      transition: { duration: 0.6, delay: 0.5 }
-    }
+      transition: { duration: 0.6, delay: 0.5 },
+    },
   };
 
   const successMessageVariants = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       scale: 1,
-      transition: { 
-        type: "spring", 
-        stiffness: 200, 
-        damping: 15 
-      }
-    }
+      transition: {
+        type: "spring",
+        stiffness: 200,
+        damping: 15,
+      },
+    },
   };
 
   return (
     <section className="contact-section py-5">
       <Container>
         {/* Modern Header with gradient underline */}
-        <motion.div 
+        <motion.div
           className="section-header text-center mb-5"
           initial="hidden"
           whileInView="visible"
@@ -178,18 +182,18 @@ const ContactSection = () => {
         >
           <h2 className="fw-bold display-4 mb-3 pt-3">Contact Us</h2>
           <motion.div
-          className="section-underline"
-          initial={{ width: 0 }}
-          animate={{ width: "6rem" }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-        ></motion.div>
+            className="section-underline"
+            initial={{ width: 0 }}
+            animate={{ width: "6rem" }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+          ></motion.div>
           <p className="text-muted mt-3 lead">
             We're here to help with any questions you might have
           </p>
         </motion.div>
 
         {/* Main Content Container */}
-        <motion.div 
+        <motion.div
           className="contact-container"
           initial="hidden"
           whileInView="visible"
@@ -206,9 +210,9 @@ const ContactSection = () => {
                       <h3 className="contact-card-title mb-4">Let's Connect</h3>
 
                       <div className="contact-items">
-                        <motion.div 
+                        <motion.div
                           className="contact-item d-flex align-items-center mb-4"
-                          variants={itemVariants} 
+                          variants={itemVariants}
                           whileHover={{ x: 5, transition: { duration: 0.2 } }}
                         >
                           <div className="contact-icon-circle">
@@ -234,7 +238,7 @@ const ContactSection = () => {
                           </div>
                         </motion.div>
 
-                        <motion.div 
+                        <motion.div
                           className="contact-item d-flex align-items-center mb-4"
                           variants={itemVariants}
                           whileHover={{ x: 5, transition: { duration: 0.2 } }}
@@ -265,7 +269,7 @@ const ContactSection = () => {
                           </div>
                         </motion.div>
 
-                        <motion.div 
+                        <motion.div
                           className="contact-item d-flex align-items-center mb-4"
                           variants={itemVariants}
                           whileHover={{ x: 5, transition: { duration: 0.2 } }}
@@ -285,13 +289,13 @@ const ContactSection = () => {
                         </motion.div>
                       </div>
 
-                      <motion.div 
+                      <motion.div
                         className="contact-social mt-5"
                         variants={itemVariants}
                       >
                         <h4 className="fs-5 mb-2">Follow Us</h4>
                         <div className="social-icons d-flex gap-3">
-                          <motion.a 
+                          <motion.a
                             href="https://wa.me/7010076370"
                             className="social-icon-link"
                             whileHover={{ scale: 1.2 }}
@@ -299,8 +303,8 @@ const ContactSection = () => {
                           >
                             <i className="bi bi-whatsapp"></i>
                           </motion.a>
-                          <motion.a 
-                            href="https://www.instagram.com/ssultrareadymixconcrete/" 
+                          <motion.a
+                            href="https://www.instagram.com/ssultrareadymix?igsh=Y2Rya2xnZjV0M2c2"
                             className="social-icon-link"
                             whileHover={{ scale: 1.2 }}
                             whileTap={{ scale: 0.9 }}
@@ -321,7 +325,7 @@ const ContactSection = () => {
                 <Card className="contact-form-card border-0 shadow-sm">
                   <Card.Body className="p-4 mb-4">
                     {formStatus === "success" ? (
-                      <motion.div 
+                      <motion.div
                         className="text-center success-message py-5"
                         initial="hidden"
                         animate="visible"
@@ -332,31 +336,33 @@ const ContactSection = () => {
                         </div>
                         <h3 className="mb-3">Thank You!</h3>
                         <p className="text-muted">
-                          Your message has been sent successfully. We'll get back
-                          to you soon.
+                          Your message has been sent successfully. We'll get
+                          back to you soon.
                         </p>
                         <motion.div
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                         >
                           <a href="/contact">
-                          <Button
-                            variant="outline-primary"
-                            className="mt-3"
-                            onClick={() => setFormStatus(null)}
-                          >
-                            Send Another Message
-                          </Button>
-                            </a>
+                            <Button
+                              variant="outline-primary"
+                              className="mt-3"
+                              onClick={() => setFormStatus(null)}
+                            >
+                              Send Another Message
+                            </Button>
+                          </a>
                         </motion.div>
                       </motion.div>
                     ) : (
                       <>
-                        <h3 className="contact-card-title mb-4">Send Message</h3>
+                        <h3 className="contact-card-title mb-4">
+                          Send Message
+                        </h3>
 
                         {formStatus === "error" && (
-                          <motion.div 
-                            className="alert alert-danger" 
+                          <motion.div
+                            className="alert alert-danger"
                             role="alert"
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -379,12 +385,14 @@ const ContactSection = () => {
                             <Col md={6}>
                               <motion.div variants={formInputVariants}>
                                 <Form.Group controlId="formName">
-                                <Form.Label>Full Name</Form.Label>
+                                  <Form.Label>Full Name</Form.Label>
                                   <Form.Control
                                     type="text"
                                     name="name"
                                     placeholder="Your Name"
-                                    className={`form-input ${invalidFields.name ? 'is-invalid' : ''}`}
+                                    className={`form-input ${
+                                      invalidFields.name ? "is-invalid" : ""
+                                    }`}
                                   />
                                 </Form.Group>
                               </motion.div>
@@ -393,12 +401,14 @@ const ContactSection = () => {
                             <Col md={6}>
                               <motion.div variants={formInputVariants}>
                                 <Form.Group controlId="formEmail">
-                                <Form.Label>Email Address</Form.Label>
+                                  <Form.Label>Email Address</Form.Label>
                                   <Form.Control
                                     type="email"
                                     name="email"
                                     placeholder="john@example.com"
-                                    className={`form-input ${invalidFields.email ? 'is-invalid' : ''}`}
+                                    className={`form-input ${
+                                      invalidFields.email ? "is-invalid" : ""
+                                    }`}
                                   />
                                 </Form.Group>
                               </motion.div>
@@ -412,7 +422,9 @@ const ContactSection = () => {
                                     type="tel"
                                     name="phone"
                                     placeholder="+91 XXXXX XXXXX"
-                                    className={`form-input ${invalidFields.phone ? 'is-invalid' : ''}`}
+                                    className={`form-input ${
+                                      invalidFields.phone ? "is-invalid" : ""
+                                    }`}
                                   />
                                 </Form.Group>
                               </motion.div>
@@ -441,13 +453,18 @@ const ContactSection = () => {
                                     rows={3}
                                     name="message"
                                     placeholder="Write your message here..."
-                                    className={`form-input ${invalidFields.message ? 'is-invalid' : ''}`}
+                                    className={`form-input ${
+                                      invalidFields.message ? "is-invalid" : ""
+                                    }`}
                                   />
                                 </Form.Group>
                               </motion.div>
                             </Col>
 
-                            <Col md={12} className="d-flex justify-content-center">
+                            <Col
+                              md={12}
+                              className="d-flex justify-content-center"
+                            >
                               <motion.div
                                 variants={itemVariants}
                                 whileHover={{ scale: 1.03 }}
@@ -457,7 +474,6 @@ const ContactSection = () => {
                                   variant="primary"
                                   type="submit"
                                   id="req-btn"
-                                
                                   className="submit-button"
                                   disabled={isSubmitting}
                                 >
@@ -491,7 +507,7 @@ const ContactSection = () => {
         </motion.div>
 
         {/* Map Section */}
-        <motion.div 
+        <motion.div
           className="map-container mt-5 rounded shadow-sm overflow-hidden"
           initial="hidden"
           whileInView="visible"
